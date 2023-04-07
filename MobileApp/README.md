@@ -32,4 +32,8 @@ Apply) 유기견 후원시스템, 유기견 정부사업 지원
 ```
 😀 Dev Enviroment
 https://dev-yakuza.posstree.com/ko/react-native/install-on-mac/
+https://velog.io/@jeon_131/React-Native-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0
+https://talkwithcode.tistory.com/45?category=1036047
+https://github.com/facebook/react-native/issues/28712
+https://zionh.tistory.com/28
 ```
