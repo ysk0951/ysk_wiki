@@ -36,4 +36,7 @@ https://velog.io/@jeon_131/React-Native-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB
 https://talkwithcode.tistory.com/45?category=1036047
 https://github.com/facebook/react-native/issues/28712
 https://zionh.tistory.com/28
+https://defineall.tistory.com/1151
+https://medium.com/nextunicorn/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-nextunicorn-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-mino-%EC%9E%85%EB%8B%88%EB%8B%A4-2678dd0a4af4
+https://m.blog.naver.com/PostView.naver?blogId=zion830&logNo=221353306321&proxyReferer=
 ```
