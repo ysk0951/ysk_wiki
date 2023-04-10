@@ -39,4 +39,8 @@ https://zionh.tistory.com/28
 https://defineall.tistory.com/1151
 https://medium.com/nextunicorn/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94-nextunicorn-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4-mino-%EC%9E%85%EB%8B%88%EB%8B%A4-2678dd0a4af4
 https://m.blog.naver.com/PostView.naver?blogId=zion830&logNo=221353306321&proxyReferer=
+https://velog.io/@dody_/RN-Library-%EB%A6%AC%EC%95%A1%ED%8A%B8%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EB%94%94%EB%B2%84%EA%B1%B0-%EB%8F%84%EA%B5%AC-react-native-debugger-redux-devtools-react-native-debugger-open
+https://medium.com/duckuism/react-native-%EB%94%94%EB%B2%84%EA%B9%85-%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0-7e46bfe89f6
+https://reactnativeelements.com/
+https://memostack.tistory.com/53
 ```
