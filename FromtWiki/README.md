@@ -55,5 +55,9 @@ async create
 function
 ```
 
+### Reference
+```
+https://redux.vlpt.us/4-2-redux-actions.html
+```
 
 
