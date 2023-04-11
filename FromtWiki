@@ -1,0 +1,10 @@
+##React
+JSX {} means JS Area
+UesEffect means Mount,Update,Unmount Hook
+UseState means variable of funtional Randering component
+
+##Vue
+Main Concept
+Vuex - helper
+watch / filter / mounted / async create / function
+Api / Store  / plugIn / View / Asset
