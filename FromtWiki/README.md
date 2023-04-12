@@ -21,9 +21,10 @@ useMemo는 컴포넌트에 대한 메모지네이션
 ### Redux
 ```
 * 리덕스 3대 요소
-Action -final Value
-Reducer - function
-type - 생성자
+Action - final Value
+type - 생성자(인자값 형태 정의) , dispatch에 들어가는값 -> 한마디로 기준값이라고 생각
+Reducer - function 이고 , payload에 type에 들어온값이 들어옴
+* https://nyang-in.tistory.com/247 참고
 
 * dispatcher가 type을 reducer에 넣어준다
 redux duck pattern - 효율적 패턴
