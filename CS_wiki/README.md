@@ -16,6 +16,22 @@ Agile Scrum
 -----  
 > Backlog, Sprint(2~4w), Velocity
 
+요구분석
+----
+> 기능적 요구
+* 주로 코드상의 내용
+> 비기능적 요구
+* 주로 품질에 대한 내용
+
+아키텍처
+----
+>마스터 슬레이브
+*슬레이브는 마스터의 기능(연산,통신,조정) 외에 제한없음
+
+Class diagram
+----
+> 이름, 속성, 오퍼레이션
+
 UML 
 ----
 > 정적 다이어그램과 동적 다이어그램에 대한 이해
@@ -210,4 +226,7 @@ TCP/IP
 > 관계해석 논리 기호
 * https://velog.io/@ln1992/16-%EC%9D%BC%EC%B0%A8-%EB%85%BC%EB%A6%AC-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%84%A4%EA%B3%84
 
-
+> AVL 다이어그램
+> ER 다이어그램
+> Data flow 다이어그램
+> UML 
