@@ -91,20 +91,40 @@ STACK
 
 IP Class 정리
 ----
-> A    
-> B    
-> C    
+> A (0)   
+* 0.0.0.0 ~ 127.255.255.255
+> B (10)   
+* 128.0.0.0 ~ 191.255.255.255
+> C (110)
+* 192.0.0.0 ~ 223.255.255.255
 > D    
+* 224.0.0.0 ~ 239.255.255.255
 > E    
+* 240.0.0.0 ~ 247.255.255.255
+> 기준값
+* 127부터 64 / 32 / 16 / 8을 더함
 
 페이지 교체 알고리즘
 ----
+> FIFO
+> OPT
+* 가장 오래 사용하지 않은것 교체
+> LRU
+* Least Recently Used <> OPT
+> LFU
+* Least Frequenly Used
+> MFU
+* Least Frequenly Used
 
 접근통제 기술
 ----
 > 임의    
+* DAC, Discretionary Access Control
+* GRANT , REVOKE가 예시
 > 강제    
+* MAC, Mandatory Access Control
 > 역활기반    
+* RBAC , Role Based Access Control
 
 데이터베이스 설계
 ----
@@ -206,7 +226,7 @@ TCP/IP
 * SELECT / PROEJCT / JOIN / DIVISION
 > 연산이상현상    
 
-트랜잭션 병행제어이론
+😀 트랜잭션 병행제어이론
 ----
 
 응집도 종류 정리
