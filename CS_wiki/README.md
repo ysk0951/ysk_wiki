@@ -3,18 +3,20 @@
 
 설계
 -----  
-> 상향식설계, 하향식설계  
+> 상향식설계, 하향식설계 의 기준을 설명하시오 
 * 설계의 세부사항, 인터페이스의 완성도가 아님  
 * **결합의 여부**가 상향식이냐 하향식이냐
 
-UI설계도구  
+UI 설계도구
 -----  
-> 순서대로 명칭과 형태를 인지  
+> 와이어프레임~프로토타입의 순서를 설명하시오  
 * 와이어프레임 > 목업 > 스토리보드 > 프로토타입    
 
-Agile Scrum
+Agile Scrum에서 각각의 단어를 설명하시오
 -----  
-> Backlog, Sprint(2~4w), Velocity
+> Backlog   
+> Sprint(2~4w)   
+> Velocity   
 
 요구분석
 ----
@@ -36,36 +38,79 @@ UML
 ----
 > 정적 다이어그램과 동적 다이어그램에 대한 이해
 * 구조를 설명하는것, 흐름을 설명하는것의 워딩 구분
+> 포함과 집합
+* 포함은 집합의 특수한 형태
 
 테스트
 ----
-> 스텁
+> 스텁이란?
 * 서버가 구현, 하위모듈을 대체
-* 하향식 통합테스트
-> 태스트 드라이버
+* 하향식 통합테스트, 파라미터 전달
+> 태스트 드라이버란?
 * 클라이언트가 후현, 상향모듈을 대체
 * 인자값을 넘겨주는 상향식 통합테스트
 
 SOLID
 ----
-> 객체지향론
+> S
 * Solo Responsibility
+> O
 * Open-close
+> L
 * Liskov : super()
+> I
 * Interface Segregation
+> D
 * Dependency : child -> parent
 
 GoF 디자인패턴의 종류
 ----
-> 생성 / 구조 / 행위
-* 객체의 입장에서 정의 / 확장 / 상호작용
+> 3가지 분류 기준
+* 생성 / 구조 / 행위
+* 정의 / 확장 / 상호작용
 > 디자인패턴에 대한 새로운 표현
 * 자주 발생하는 문제에 대한 반복적인 해결방법
 
+DFS
+----
+> 순회 기준 우선순위
+* 자식, 형제, 상위
+
+STACK
+----
+> 넘어가거나 없는데 포인트를 내리거나
+* Overflow, Underflow
+
+테스트케이스 자동생성
+----
+
+카티션 프로덕트
+----
+> 계산법
+* degree * cardinary
+
+IP Class 정리
+----
+> A    
+> B    
+> C    
+> D    
+> E    
+
+페이지 교체 알고리즘
+----
+
+접근통제 기술
+----
+> 임의    
+> 강제    
+> 역활기반    
+
 데이터베이스 설계
 ----
-> 개념 / 논리 / 물리 단계 순으로 설계
-* 스키마 / 인터페이스 / 트래픽 관련 설계
+> 데이터베이스 설계 단계
+* 개념 / 논리 / 물리 단계 
+* 스키마 / 인터페이스 / 트래픽 관련
 * 뒤에 단계는 앞에 단계를 검증하는것을 포함할수있다
 
 E-R 다이어그램
@@ -77,7 +122,7 @@ DB SC 용어
 ----
 > Degree   
 > Cardinality   
-> Tupel : 수정 불가한 객체를 의미하기도함   
+> Tupel  
 > Attribute      
 > Domain    
 > DISTINCT   
@@ -93,8 +138,10 @@ DB SC 용어
 정규화 과정
 ----
 > 도메인이 원자값   
-> 부분적 함수 종속 제거 : 부분키로도 특정이 가능하다면   
-> 이행적 함수 종속 제거 : X->Y Y->Z라면   
+> 부분적 함수 종속 제거
+* 부분키로도 특정이 가능하다면
+> 이행적 함수 종속 제거 
+* X->Y Y->Z라면   
 > 결정자이면서 후보키 아닌것 제거   
 > 다치 종속 제거   
 > 조인 종속 제거   
@@ -112,21 +159,24 @@ C언어 포인터 정리
 
 IPv4와 IPv6정리
 ----
->IPv4
-* 호스트 주소 자동설정 (유티캐스트 지원 - 1:1 통신에 사용)
-* 클래스별로 4개
->IPv6
-* 16비트 8개 -> 128비트
-* 40옥텟 해더
-* 주소 자동설정
-* 속도가 비교적 빠르고 v4와 호완
+> 유티캐스트(1:1 통신 주소 자동설정)
+* IPv4 
+> 클래스별로 4개
+* IPv4 
+> 16비트 8개 -> 128비트
+* IPv6
+> 40옥텟 해더
+* IPv6
+> 속도가 비교적 빠르고 v4와 호완
+* IPv6
 
 TCP/IP
 ----
 >ARP(Address * *)
 * IP to MAC Address
 >ICMP
->PPP
+* Error Message
+>Point to Point
 * 각각 서버와 클라이언트가 둘다 될수있는 방식(Point to Point)의 프로토콜
 
 응집도과 결합도
@@ -150,19 +200,48 @@ TCP/IP
 > SAN
 * Nas + Das
 
-시스템 공격에관한 SC용어
+관계대수
 ----
-> Buletooth(Blue + )
-* Bug - 원격조정, 전화, 감청
-* Snarf - 파일에 접근
-* Printing - 검색을 하는 활동
-* Jacking - 명함을 익명으로 퍼뜨림
+> 연산기호
+* SELECT / PROEJCT / JOIN / DIVISION
+> 연산이상현상    
 
-> DOS
-* Smaurfing - ICMP(error)를 활용하여 집중적으로 대용량 데이터 공격
-* Ping of Death - 정상크기보다 큰 ICMP를 쪼개서 보내어 패킷을 처리하게 만듬
-* SYN Flooding - 존재하지 않는 클라이언트가 접속하여 다른 사용자 사용불가능하게 만듬
-* Land - 출발지와 목적지 IP를 동일하게 만듬
+트랜잭션 병행제어이론
+----
+
+응집도 종류 정리
+----
+
+ARQ
+----
+
+SSTF Scheduling
+----
+
+FLSM
+----
+
+Buletooth Attack
+----
+> Bug 
+* 원격조정, 전화, 감청
+> Snarf (허겁지겁먹다)
+* 파일에 접근
+> Printing 
+* 검색을 하는 활동
+> Jacking 
+* 명함을 익명으로 퍼뜨림
+
+DOS
+----
+> Smaurfing 
+* ICMP(error)를 활용하여 집중적으로 대용량 데이터 공격
+> Ping of Death 
+* 정상크기보다 큰 ICMP를 쪼개서 보내어 패킷을 처리하게 만듬
+> SYN Flooding (Sync)
+* 존재하지 않는 클라이언트가 접속하여 다른 사용자 사용불가능하게 만듬
+> Land 
+* 출발지와 목적지 IP를 동일하게 만듬
 
 > Honeypot
 * 비정상적인 접근 탐지
@@ -180,6 +259,8 @@ TCP/IP
 * 64비트 알고리즘
 > AES
 * DES를 발전, 128비트 알고리즘
+> RSA
+* 소수로 암호화 비대칭 암호화
 
 리눅스
 ----
@@ -225,7 +306,37 @@ TCP/IP
 > FAT -> NTFS
 * 상대적 대용량, 대신 속도가 늘려짐 
 > LOC : 낙관 / 기대 / 비관   
-> 테일러링   
+> 테일러링      
+> 타조   
+> 원세그   
+> 포스퀘어   
+> VLAN   
+> STP   
+> L2AN
+> SDS   
+> C&C Server   
+> Botnet   
+> Zero Day Attack   
+> Key Logger Attack   
+> Back Doo   
+> Brute-Force Attack   
+> Ping Flood   
+> MLFQ   
+> MQTT   
+> Zingbee   
+> MTSP   
+> Pass flag   
+> Opcode   
+> Salt   
+> LOC기법   
+> 델파이기법   
+> Effort Per Task   
+> WWW   
+> OWASP   
+> WBSEC   
+> ITU   
+> Cocomo Model Line Standard
+* 5만, 30만 -> 조직, 반분리, 내장
 
 처음 보는 SC관련 IMG
 ----
@@ -238,4 +349,3 @@ TCP/IP
 > AVL 다이어그램
 > ER 다이어그램
 > Data flow 다이어그램
-> UML 
