@@ -19,6 +19,20 @@
 * UseCase로 분석하는 방식
 > Coad Yorudon
 * E-R 다이어그램을 사용하여 객체 행위 모델링을 통해 분석하는 방식
+> LOC : 낙관 / 기대 / 비관   
+> 테일러링   
+> PUTNAM   
+* 소프트웨어 개발 주기의 간 단계별로 요구할 인력의 분포를 가정하는 모형입니다.
+Putnam 모형과 Rayleigh Noden 곡선을 기초로 개발한 자동화 추정 도구로 SLIM이 있습니다.
+> SLIM    
+> FP   
+* 기능점수(FP) 모형 (비용산정)
+> PERT   
+* 프로그램 평가(Program Evaluation) 및 검토 기법(Review Technique)
+> 델파이기법  
+* 전문가들의 의견수립, 중재, 타협의 방식으로 반복적인 피드백을 통한 하향식 의견 도출 방법으로 문제를 해결하는 기법
+> Effort Per Task   
+* 개발 단계별 인월수 기법은 LOC 기법을 보완하기 위한 기법으로, 각 기능을 구현시키는 데 필요한 노력을 생명 주기의 각 단계별로 산정
 
 UI 설계도구
 -----  
@@ -72,6 +86,13 @@ UML
 * 리스크관리
 > 폭포수 변환
 * V모델
+> HIPO 
+* Hierarchy Input Process Output
+* 하향식 소프트웨어 개발을 위한 문서화 도구
+> 라우터   
+* 컴퓨팅 디바이스와 네트워크를 다른 네트워크에 연결하는 네트워킹 디바이스
+> RAD   
+* 도구로 디자인하고 Code Generator를 활용해 빠르게 개발하는 기법
 
 테스트
 ----
@@ -240,6 +261,45 @@ GoF 디자인패턴의 종류
   * > Exterior Gateway Protocol (외부그룹)
 > BGP   
   * > Boarder Gateway protocol (종속 게이트웨이)
+
+> 임계 구역 접근 상호 배제
+* Semaphore (신호깃발이라는 뜻)
+> FAT -> NTFS
+* 상대적 대용량, 대신 속도가 늘려짐 
+> VLAN   
+* 논리적으로 분할된 스위치 네트워크 : 동적인 조직에서 작업 그룹을 구성할 수 있음
+> STP   
+* Spannging Tree Protocol
+* 2개 이상의 스위치가 여러 경로로 연결될때, 무한 루프 현상을 막기 위해 우선순위에 따라 1개로 통신하는 프로토콜
+> L2AN
+* OSI의 2계층에 속하는 장비로, MAC 주소를 기반으로 프레임을 전송하고 동일 네트워크 간의 연결만 가능
+> SDS 
+* 물리적인 데이터 스토리지를 가상화하여 여러 스토리지를 하나처럼 관리하거나, 여러 스토리지로 나눠 사용하는 소프트웨어
+> MLFQ  
+* Multi-level Feedback Queue 
+> MQTT   
+* 경량 머신 대 머신 통신에 사용되는 표준 기반 메시징 프로토콜
+* 발행 - 구독 기반의 메세징 프로토콜
+> Zingbee   
+* 소형, 저전력 디지털 라디오를 이용해 개인 통신망을 구성하여 통신하기 위한 표준 기술
+> MessageBus   
+> Hub & Spoke   
+> HyBrid   
+> MBR
+* 파티션된 기억 장치(이를테면 하드 디스크)의 첫 섹터 (섹터 0)인 512 바이트 시동 섹터이다   
+> NAC  
+* 네트워크 접근제어(Network Access Control)는 네트워크에 접속하는 장치에 대해 접속 가능 여부를 확인하여 인가된 장치만이 접속할 수 있도록 제한하는 것
+> NIC   
+* 네트워크 인터페이스 컨트롤러(network interface controller, NIC)는 컴퓨터를 네트워크에 연결하여 통신하기 위해 사용하는 하드웨어 장치
+> Topology   
+* 단어 그 자체로 망 구성방식
+* 컴퓨터 네트워크의 요소들(링크, 노드 등)을 물리적으로 연결해 놓은 것, 또는 그 연결 방식
+> SNMP  
+*  UDP/IP(사용자 데이터그램 프로토콜/인터넷 프로토콜)를 사용하여 이더넷 연결을 통해 네트워크 관리 작업을 수행하는 응용 계층 프로토콜 
+> FLSM   
+* Fixed Length Subnet Mask  <-> VariableLength Subnet Mask
+> ARQ  
+* ARQ는 Automatic Repeat Request의 약자로, 자동 재전송을 의미한다 쉽게 말해, 에러가 발생할 경우 재전송을 요구하는 방식이다. 
 
 IPv4와 IPv6정리
 ----
@@ -450,6 +510,10 @@ DB SC 용어
 * > 회복
   * 프로세스 자원 회복
 
+
+> SSTF Scheduling   
+* (Shortest Seek Time First) : 현재 디스크의 헤드 위치에서 가장 가까운 실린더에 대한 요청을 우선적으로 처리한다.
+
 페이지 교체 알고리즘
 ----
 > FIFO
@@ -541,14 +605,11 @@ DOS
 * 존재하지 않는 클라이언트가 접속하여 다른 사용자 사용불가능하게 만듬
 > Land 
 * 출발지와 목적지 IP를 동일하게 만듬
-
 > Honeypot
 * 비정상적인 접근 탐지
 * 침입자를 속여 쉽게 공격이 가능한것처럼 보임
-
 > DPI (Deep Packet Inspection)
 * 해킹 탐지, 트래픽 조정, OSI 전 레이어 탐지
-
 > PLCP (Packet Level Control Processor)
 * 패킷 교환 시스템에서 정보 처리와 통계 등을 담당
 
@@ -579,81 +640,66 @@ SSH
 > RSA
 * 소수로 암호화 비대칭 암호화
 
-😀 카테고리 분류가 되지않은 SC 용어들정리 
+보안및 공격방식
 ----
-> 임계 구역 접근 상호 배제
-* Semaphore (신호깃발이라는 뜻)
 > Secure 코딩
 * 공격자가 프로그램 코드를 실행시키게 만드는 방식 - 작동이 목적임
-> FAT -> NTFS
-* 상대적 대용량, 대신 속도가 늘려짐 
-> LOC : 낙관 / 기대 / 비관   
-> 테일러링      
-> 타조   
-> 원세그   
-> 포스퀘어   
-> VLAN   
-> STP   
-> L2AN
-> SDS   
 > C&C Server   
+* C&C 서버는 Command & Control 서버, C2 서버, 명령제어 서버 등 다양하게 불리며 사이버 공격에서 두뇌 역할
 > Botnet   
-> Zero Day Attack   
+* 좀비 PC
+> Zero Day Attack  
+* 패치가 나오지 않은 시점에서 이루어지는 공격 
 > Key Logger Attack   
-> Back Doo   
+* 컴퓨터 사용자의 키보드 움직임을 탐지해서 저장하고, ID나 패스워드, 계좌 번호, 카드 번호 등과 같은 개인 중요 정보를 몰래 빼가는 해킹
+> Back Door
+* 어떤 제품이나 컴퓨터 시스템, 암호시스템 혹은 알고리즘에서 정상적인 인증 절차를 우회하는 기법이다
 > Brute-Force Attack   
+* 암호학 무차별 대입공격
 > Ping Flood   
-> MLFQ   
-> MQTT   
-> Zingbee   
-> MTSP   
-> Pass flag   
+* system에 ICMP packet을 계속해서 보내서, 대상 system이 Request 에 응답하느라 다른 일을 하지 못하도록 하는 공격
 > Opcode   
+* 기계어에서 명령코드를 나타내는 부호
 > Salt  
-> 델파이기법   
-> Effort Per Task   
-> WWW   
+* 데이터, 비밀번호, 통과암호를 해시 처리하는 단방향 함수의 추가 입력으로 사용되는 랜덤 데이터이다
 > OWASP   
-> WBSEC   
-> STA   
+* 오픈 소스 웹 어플리케이션 보안 프로젝트, 가장 큰 오픈소스 웹 애플리케이션 보안 프로젝트로 주로 웹에 관한 정보노출, 악성 파일 및 스크립트, 보안 취약점 등을 연구
 > Collision Domain   
-> SSMA/CA   
-> SSMA/CD   
-> ITU   
-> MessageBus   
-> Hub & Spoke   
-> HyBrid  
-> MBR   
-> NAC   
-> NIC   
-> CBD SW 개발 표준 산출물   
-> PUTNAM   
-> FP   
-> SLIM   
-> SPICE 모델 프로세스 수행능력
-> L2스위치   
-> HIPO   
-> 라우터   
-> RAD   
+* 동일한 collision domain에서 하나의 PC가 통신할 경우, 다른 모든 PC는 통신이 불가
+> CSMA/CA   
+* Carrier Sense Multiple Access / Collision Avoidance
+* 반송파 감지 다중 엑세스 충돌 회피
+> CSMA/CD   
+* Carrier Sense Multiple Access / Collision Detect
+* 반송파 감지 다중 엑세스 충돌 감지
 > DSA   
-> ECC   
-> IPSec   
+* DSA는 미국의 전자서명 표준이다.
+> IPSec  
+* 네트워크에서의 안전한 연결을 설정하기 위한 통신 규칙 또는 프로토콜 세트 
+* 터널모드와 전송모드
+* 전송모드는 헤더로르 제외한 페이로드만 보호
+* 터널모드는 전체 패킷을 보호
 > nmap  
-> Apnic   
-> Topology   
-> Sqoop   
-> SDB   
-> PERT   
+* NMAP은 port Scanning 툴(해킹방어)
+
+기타 외워야하는 Service및 기술들
+---
+> 타조   
+* 하둡(Hadoop) 기반의 분산 데이터 웨어하우스 프로젝트
+> 원세그
+* 일본의 이동방송 기술   
+> 포스퀘어   
+* 위치 기반 소셜 네트워크 서비스이자 이를 개발한 회사의 명칭
+> ASLR  
+* Address Space Layout Randomization의 줄임말입니다. 직역하면 "주소 공간 배열 무작위화" 입니다. 말 그대로 주소를 매번 실행할 때마다 무작위화시켜 공격을 방해 
+> Sqoop 
+* Hadoop과 관계형 데이터베이스 간에 데이터를 전송할 수 있도록 설계된 오픈소스 소프트웨어  
 > N-Screen   
+* 특정한 주제의 콘텐츠들을 여러 개의 스크린에서 동시에 볼 수 있다는 개념
 > Memristor   
+* Memory registor (이전의 상테를 기억하는 메모리)
 > MEMS   
-> SNMP   
-> Bridge   
-> ASLR   
-> FIN   
-> ARQ   
-> SSTF Scheduling   
-> FLSM   
+* Micro Electro Mechanical Systems (미세 전기 기계 시스템)의 약자로, 미세한 입체 구조 (3차원 구조)를 지니며, 다양한 입력 · 출력 신호를 취급하는 시스템의 총칭
 
 카테고리화가 되지 않은 CS관련 IMG
 ----
