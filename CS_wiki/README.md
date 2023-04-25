@@ -17,17 +17,18 @@
 * Micro와 Macro로 나눠서 분석하는 방식
 > Jacobson
 * UseCase로 분석하는 방식
-> Coad Yorudon
+> Coad-Yorudon
 * E-R 다이어그램을 사용하여 객체 행위 모델링을 통해 분석하는 방식
-> LOC : 낙관 / 기대 / 비관   
+> LOC (Line *)
+* 낙관 / 기대 / 비관   
 > 테일러링   
 > PUTNAM   
 * 소프트웨어 개발 주기의 간 단계별로 요구할 인력의 분포를 가정하는 모형입니다.
 Putnam 모형과 Rayleigh Noden 곡선을 기초로 개발한 자동화 추정 도구로 SLIM이 있습니다.
 > SLIM    
-> FP   
+> FP (Function *)   
 * 기능점수(FP) 모형 (비용산정)
-> PERT   
+> PERT (Program * Technique)   
 * 프로그램 평가(Program Evaluation) 및 검토 기법(Review Technique)
 > 델파이기법  
 * 전문가들의 의견수립, 중재, 타협의 방식으로 반복적인 피드백을 통한 하향식 의견 도출 방법으로 문제를 해결하는 기법
@@ -149,8 +150,8 @@ UML
 * 하향식 소프트웨어 개발을 위한 문서화 도구
 > 라우터   
 * 컴퓨팅 디바이스와 네트워크를 다른 네트워크에 연결하는 네트워킹 디바이스
-> RAD   
-* 도구로 디자인하고 Code Generator를 활용해 빠르게 개발하는 기법
+> RAD (Rapid *)
+* Rapid Application Development - 도구로 디자인하고 Code Generator를 활용해 빠르게 개발하는 기법
 
 테스트
 ----
@@ -200,7 +201,6 @@ UML
 * 5만, 30만 -> 조직, 반분리, 내장 
 > Basis Path
   * 수행가능한 모든 경로 
-> LOC기법   
 > DFD
 * 요구사항에서 데이터의 흐름
 > DD 
@@ -212,7 +212,7 @@ UML
 > STD
 * 특정 일이 발생할 경우 시스템간의 상태 전이모델
 > SADT (* Analysis and Design *)
-* 그래픽언어를 사용하여 시스템 모델을 구축 S/W 요구사항 분석과 설계를 위한 구조적 분석과 설계기법 또는 도구
+* Structured Analysis and Design Techniques - 그래픽언어를 사용하여 시스템 모델을 구축 S/W 요구사항 분석과 설계를 위한 구조적 분석과 설계기법 또는 도구
 > Wavelength Division Multiplexing
 * 파장이 서로 다른 관ㅇ신호 광섬유 다중화 기술
 
@@ -325,11 +325,11 @@ GoF 디자인패턴의 종류
 
 경로제어 routing 프로토콜
 ---
-> IGP
+> IGP (Interior *)
   * > Interior Gateway Protocol (동일그룹)
-  * > OSPF
+  * > OSPF (* Shortest *)
     * Open Shortest Path First
-  * > RIP
+  * > RIP (* imfomation *)
     * > Routing Infomation Protocol
       * Hop Counting
 > EGP   
@@ -343,39 +343,39 @@ GoF 디자인패턴의 종류
 * 상대적 대용량, 대신 속도가 늘려짐 
 > VLAN   
 * 논리적으로 분할된 스위치 네트워크 : 동적인 조직에서 작업 그룹을 구성할 수 있음
-> STP   
+> STP (Spannging *)
 * Spannging Tree Protocol
 * 2개 이상의 스위치가 여러 경로로 연결될때, 무한 루프 현상을 막기 위해 우선순위에 따라 1개로 통신하는 프로토콜
 > L2AN
 * OSI의 2계층에 속하는 장비로, MAC 주소를 기반으로 프레임을 전송하고 동일 네트워크 간의 연결만 가능
-> SDS 
-* 물리적인 데이터 스토리지를 가상화하여 여러 스토리지를 하나처럼 관리하거나, 여러 스토리지로 나눠 사용하는 소프트웨어
-> SDDC
+> SDS (Software *)
+* Software Defined Storage -물리적인 데이터 스토리지를 가상화하여 여러 스토리지를 하나처럼 관리하거나, 여러 스토리지로 나눠 사용하는 소프트웨어
+> SDDC (* data Center)
 * Software-defined Data Center (SDDC)는 데이터센터의 모든 인프라인 네트워크, 스토리지, 컴퓨터, 보안 등이 가상화 되어 서비스로서 제공되는 차세대의 핵심적인 데이터센터 솔루션
-> MLFQ  
-* Multi-level Feedback Queue 
-> MQTT (Message Queuing Telemetry Transport)
-* 경량 머신 대 머신 통신에 사용되는 표준 기반 메시징 프로토콜
+> MLFQ (Multi level *) 
+* Multi-level Feedback Queue - MLFQ는 여러 개의 큐로 구성되며, 각각 다른 우선순위(Priority level)가 배정된다. 실행 준비가 된 프로세스는 이 중 하나의 큐에 존재한다. MLFQ는 실행할 프로세스를 결정하기 위하여 우선순위를 사용한다. 높은 우선순위를 가진 작업, 즉 높은 우선순위 큐에 존재하는 작업이 선택된다. 
+> MQTT (Message * Transport)
+* Message Queuing Telemetry Transport - 경량 머신 대 머신 통신에 사용되는 표준 기반 메시징 프로토콜
 * 발행 - 구독 기반의 메세징 프로토콜
 > Zingbee   
 * 소형, 저전력 디지털 라디오를 이용해 개인 통신망을 구성하여 통신하기 위한 표준 기술
 > MessageBus   
 > Hub & Spoke   
 > HyBrid   
-> MBR
-* 파티션된 기억 장치(이를테면 하드 디스크)의 첫 섹터 (섹터 0)인 512 바이트 시동 섹터이다   
-> NAC  
+> MBR(master *)
+* master boot record - 파티션된 기억 장치(이를테면 하드 디스크)의 첫 섹터 (섹터 0)인 512 바이트 시동 섹터이다   
+> NAC (* Access *)
 * 네트워크 접근제어(Network Access Control)는 네트워크에 접속하는 장치에 대해 접속 가능 여부를 확인하여 인가된 장치만이 접속할 수 있도록 제한하는 것
-> NIC   
+> NIC(* interface *)
 * 네트워크 인터페이스 컨트롤러(network interface controller, NIC)는 컴퓨터를 네트워크에 연결하여 통신하기 위해 사용하는 하드웨어 장치
 > Topology   
 * 단어 그 자체로 망 구성방식
 * 컴퓨터 네트워크의 요소들(링크, 노드 등)을 물리적으로 연결해 놓은 것, 또는 그 연결 방식
-> SNMP  
+> SNMP (Simple Network *)
 *  UDP/IP(사용자 데이터그램 프로토콜/인터넷 프로토콜)를 사용하여 이더넷 연결을 통해 네트워크 관리 작업을 수행하는 응용 계층 프로토콜 
-> FLSM   
+> FLSM (Fixed Length *)
 * Fixed Length Subnet Mask  <-> VariableLength Subnet Mask
-> ARQ  
+> ARQ (* Request)
 * ARQ는 Automatic Repeat Request의 약자로, 자동 재전송을 의미한다 쉽게 말해, 에러가 발생할 경우 재전송을 요구하는 방식이다. 
 > 유니캐스트 , 브로드캐스트 , 멀티캐스트, 애니캐스트
 * 유니캐스트는 한 PC에게만 보내는 1:1
@@ -405,8 +405,8 @@ IPv4와 IPv6정리
 TCP/IP + UDP
 ----
 > ARP(Address * *)
-* IP to MAC Address
-> ICMP
+* IP to MAC Address (Address Resolution Protocol) 프로토콜
+> ICMP (* Message Protocol)
 * Error Message - Internet Control Message Protocol
 > Point to Point
 * 각각 서버와 클라이언트가 둘다 될수있는 방식(Point to Point)의 프로토콜
@@ -557,10 +557,10 @@ DB SC 용어
 관계대수
 ----
 > 순수연산자
-  * > Project
-  * > Select
+  * > Project (파이)
+  * > Select (시그마)
   * > Join
-  * > Devide    
+  * > Devide (나누기)
 > 연산이상현상  
   * > 삽입   
   * > 삭제   
@@ -756,7 +756,7 @@ Buletooth Attack
 ----
 > Bug 
 * 원격조정, 전화, 감청
-> Snarf (허겁지겁먹다)
+> narf (허겁지겁먹다)
 * 파일에 접근
 > Printing 
 * 검색을 하는 활동
@@ -765,7 +765,7 @@ Buletooth Attack
 
 DOS
 ----
-> Smaurfing 
+> smurfing (스머프??) 
 * ICMP(error)를 활용하여 집중적으로 대용량 데이터 공격
 > Ping of Death 
 * 정상크기보다 큰 ICMP를 쪼개서 보내어 패킷을 처리하게 만듬
@@ -776,10 +776,10 @@ DOS
 > Honeypot
 * 비정상적인 접근 탐지
 * 침입자를 속여 쉽게 공격이 가능한것처럼 보임
-> DPI (Deep Packet Inspection)
-* 해킹 탐지, 트래픽 조정, OSI 전 레이어 탐지
-> PLCP (Packet Level Control Processor)
-* 패킷 교환 시스템에서 정보 처리와 통계 등을 담당
+> DPI (Depp *)
+* (Deep Packet Inspection) - 해킹 탐지, 트래픽 조정, OSI 전 레이어 탐지
+> PLCP (Packet *)
+* Packet Level Control Processor - 패킷 교환 시스템에서 정보 처리와 통계 등을 담당
 > 암호화 알고리즘
 * MD4, 5 (해시)
 * SHA-1
@@ -834,14 +834,14 @@ SSH
 * 기계어에서 명령코드를 나타내는 부호
 > Salt  
 * 데이터, 비밀번호, 통과암호를 해시 처리하는 단방향 함수의 추가 입력으로 사용되는 랜덤 데이터이다
-> OWASP   
+> OWASP(Open *)   
 * 오픈 소스 웹 어플리케이션 보안 프로젝트, 가장 큰 오픈소스 웹 애플리케이션 보안 프로젝트로 주로 웹에 관한 정보노출, 악성 파일 및 스크립트, 보안 취약점 등을 연구
 > Collision Domain   
 * 동일한 collision domain에서 하나의 PC가 통신할 경우, 다른 모든 PC는 통신이 불가
-> CSMA/CA   
+> CSMA/CA  (A) 
 * Carrier Sense Multiple Access / Collision Avoidance
 * 반송파 감지 다중 엑세스 충돌 회피
-> CSMA/CD   
+> CSMA/CD  (D)
 * Carrier Sense Multiple Access / Collision Detect
 * 반송파 감지 다중 엑세스 충돌 감지
 > DSA   
