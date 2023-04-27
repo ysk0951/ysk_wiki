@@ -6,6 +6,8 @@
 > 상향식설계, 하향식설계 의 기준을 설명하시오 
 * 설계의 세부사항, 인터페이스의 완성도가 아님  
 * **결합의 여부**가 상향식이냐 하향식이냐
+> 워크스루와 인스펙션의 차이
+* 작성자 제외여부 (인스펙션)
 
 설계분석론
 ----
@@ -25,7 +27,8 @@
 > PUTNAM   
 * 소프트웨어 개발 주기의 간 단계별로 요구할 인력의 분포를 가정하는 모형입니다.
 Putnam 모형과 Rayleigh Noden 곡선을 기초로 개발한 자동화 추정 도구로 SLIM이 있습니다.
-> SLIM    
+> ESTIMACS
+* 자동화도구
 > FP (Function *)   
 * 기능점수(FP) 모형 (비용산정)
 > PERT (Program * Technique)   
@@ -139,6 +142,8 @@ UML
   * 실체화 UML
 > 구성요소
   * 사물 , 관계 , 다이어그램
+> 스테레오타입 기호 
+  * <<>>
 개발모형
 ----
 > 나선형
@@ -186,10 +191,12 @@ UML
 * 내부테스트(개발진, QA) , 상용테스트(일반인)
 인터페이스 구현 검증 도구
 ---
-> xUnit   
+> xUnit
+  * 단위테스트가 핵심   
 > TAF (* Automation *)  
   * > Test Automation Framwork
     * STAF, NTAF
+    * 컴포넌트및 서비스 테스트 자동화가 핵심
 > FitNesse
   * Test Wiki
 > watir
@@ -297,6 +304,9 @@ GoF 디자인패턴의 종류
 > 디자인패턴에 대한 새로운 표현
 * 자주 발생하는 문제에 대한 반복적인 해결방법
 
+> CMM 모델 (조직의 성숙도)
+* 초기, 관리, 정의, 정량, 최적화
+
 응집도과 결합도
 ----
 > 좋은소프트웨어
@@ -401,6 +411,8 @@ IPv4와 IPv6정리
 * IPv6
 > 속도가 비교적 빠르고 v4와 호완
 * IPv6
+> 패킷 크기가 고정 / 비고정
+* IPv4 / IPv6
 
 TCP/IP + UDP
 ----
@@ -412,6 +424,8 @@ TCP/IP + UDP
 * 각각 서버와 클라이언트가 둘다 될수있는 방식(Point to Point)의 프로토콜
 > TCP/UDP
 * 차이는 연결형 / 비연결형 으로 속도와 신뢰성의 문제
+> OSI 2계층은 인접하는 신뢰, 종단간은 신뢰는
+* 4계층
 
 IPv4 Class 정리
 ----
@@ -485,6 +499,8 @@ DB SC 용어
 > CASCADE   
 > RESTRICTED   
 > View는 SQL의 제한이 있음   
+> 무결성과 기밀성
+* 수정과 접근의 차이
 
 병렬 데이터베이스 수평분할
 ---
@@ -514,7 +530,7 @@ DB SC 용어
 추가개념
 ----
 > 정규화된 속성을 단순화를 위해 중복을 통합하는 활동
-* 반정규화
+* 반정규화 (집계 , 진행, 특정부분테이블을 추가)
 > OLAP (* Analytical Processing)
 * 데이터 웨어하우스, 데이터 마트 또는 기타 중앙화된 통합 데이터 저장소의 대용량 데이터를 고속으로 다차원 분석하는 소프트웨어
 * > 롤업(roll-up)
@@ -527,7 +543,14 @@ DB SC 용어
   * 슬라이스와 비슷, 하위 큐브 만들기 위해 2개 이상 차원 선택
 * > 피벗(pivot)
   * 데이터 축을 회전하여 제공
-
+> STDDEV
+* 표준편차
+> VARIANCE
+* 분산
+> PROJECT, DIVISION 연산에 대해 설명
+* 칼럼만뗀냐, 해당 조건을 포함하는 (배제된) 칼럼 추출
+> 분산데이터 특성
+* Location / Replication / Failure / Concure
 카티션 프로덕트
 ----
 > 차수
@@ -589,6 +612,20 @@ DB SC 용어
 > 쉘정렬
   * > 삽입정렬을 발전시킨 방식
     * n^1.5 / n^2
+
+모듈
+----
+> RPC
+* Remote Procedure Call
+> ORB
+* Object Request Broker
+
+> Tree 
+* > Degree
+  * 햐왜 노드가 가장 많이 달린수
+* > 단말 노드
+  * 하위가 없는 노드
+
 </br></br>
 
 # 😃 운영체재
@@ -606,6 +643,23 @@ DB SC 용어
     * 외부단편화
     * 가상과 주기억을 논리적으로 나눈뒤 적재
     * 세그멘테이션 테이블
+
+교착상태 조건
+----
+* 상호배제
+* 점유와 대기
+* 환형대기
+* 비선점
+
+프로세스 상태 순서
+----
+* Submit
+* Hold
+* Ready
+* Run
+* Wait
+* Block
+* Terminated
 
 운영체재 자원 배분
 ---
@@ -628,6 +682,8 @@ DB SC 용어
 
 > SSTF Scheduling   
 * (Shortest Seek Time First) : 현재 디스크의 헤드 위치에서 가장 가까운 실린더에 대한 요청을 우선적으로 처리한다.
+> HRN ( * Ratio * )
+* Hightest Response-ratio Next (대기시간 + 서비스시간) / 서비스시간
 
 페이지 교체 알고리즘
 ----
@@ -655,6 +711,8 @@ DB SC 용어
 * TCP 또는 UDP를 사용하여 네트워크 연결을 읽거나 기록하는 컴퓨터 네트워킹 유틸리티
 > cron
 * job scheduler
+> SetUID
+* 실 사용자에서 프로그램 소유자ID로 유효사용자가 변경됨 (권한 상승 우려 때문에 반드시 최소화해야함)
 
 ISO 용어 정리
 ----
@@ -703,7 +761,8 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=azurecourse&
 * preorder
 * inorder
 * postorder
-
+> 디지털트윈
+* 디지털 트윈(Digital Twin)은 라이프사이클 전반에 걸쳐 실시간 데이터를 사용하여 업데이트되고, 시뮬레이션, 머신 러닝, 추론을 통해 의사 결정을 돕는 객체 또는 시스템의 가상 모델을 일컫습니다.
 </br></br>
 
 # 😃 언어 개념 
@@ -866,8 +925,23 @@ SSH
 * ESB는 물리적으로 분산된 서비스 component 들을 통합여여 연동할 수 있도록 표준화된 메시지 버스와 프로토콜을 이용해서 서로 연동할 수 있는 시스템
 > Pharming
 * 악성코드에 감염된 PC를 조작해, 이용자가 인터넷 '즐겨찾기' 또는 포털사이트를 통해 금융회사 홈페이지에 접속하여도 피싱(가짜)사이트로 유도되어 금융정보를 탈취하여 유출된 정보로 예금인출하는 방식
-
+> Trin00
+* trinoo 또는 trin00은 DDoS 공격을 수행하기 위한 일련의 컴퓨터 프로그램
 기타 외워야하는 Service및 기술들
+> Stacheldraht
+* 분산서비스 거부공격을 하는 멜웨어
+> TFN(* Network)
+* Tribe Flood Network은 ICMP Flood, SYN Flood, UDP Flood 및 Smurf 공격과 같은 다양한 DDoS 공격을 수행하는 컴퓨터 프로그램 집합
+> Nimda
+* 님다는 2001년 9월에 발생한 컴퓨터 바이러스이다. 미국, 유럽, 라틴아메리카에서 동시에 발생하였고, 단 22분만에 인터넷에 가장 넓게 확산된 악성 바이러스로 막대한 경제적 손실을 발생시켰다
+> PIMS(Personal Information *)
+* Personal Information Management System의 약자로, 기업이 개인정보 보호 활동을 체계적, 지속적으로 수행하기 위해 필요한 보호조치 체계를 구축하였는지 점건하여 일정 수준 이상의 기업에 인증을 부여하는 제도
+> QKD(Quantum *)
+* Quantum Key Distribution - 양자 물리학의 기본 원리를 활용하여 검증 가능한 보안으로 광섬유 네트워크를 통해 암호화 키를 교환하는 기술
+> Grayware
+* 사용자의 동의를 받아 다운받는 (불편함을 유발) 프로그램 - adware가 속함
+> Mashup
+* Web info -> new System
 ---
 > 타조   
 * 하둡(Hadoop) 기반의 분산 데이터 웨어하우스 프로젝트
