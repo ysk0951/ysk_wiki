@@ -26,10 +26,8 @@
 > 테일러링   
 
 > PUTNAM   
-* 소프트웨어 개발 주기의 간 단계별로 요구할 인력의 분포를 가정하는 모형입니다.
-Putnam 모형과 Rayleigh Noden 곡선을 기초로 개발한 자동화 추정 도구로 SLIM이 있습니다.
-> ESTIMACS
-* 자동화도구
+* 소프트웨어 개발 주기의 간 단계별로 요구할 인력의 분포를 가정하는 모형
+* Putnam 모형과 Rayleigh Noden 곡선을 기초로 개발한 자동화 추정 도구로 SLIM, ESTIMACS가 있다
 > FP (Function *)   
 * 기능점수(FP) 모형 (비용산정)
 > PERT (Program * Technique)   
@@ -37,7 +35,8 @@ Putnam 모형과 Rayleigh Noden 곡선을 기초로 개발한 자동화 추정 �
 > 델파이기법  
 * 전문가들의 의견수립, 중재, 타협의 방식으로 반복적인 피드백을 통한 하향식 의견 도출 방법으로 문제를 해결하는 기법
 > Effort Per Task   
-* 개발 단계별 인월수 기법은 LOC 기법을 보완하기 위한 기법으로, 각 기능을 구현시키는 데 필요한 노력을 생명 주기의 각 단계별로 산정
+* 개발 단계별 인월수 기법은 LOC 기법을 보완하기 위한 기법
+* 각 기능을 구현시키는 데 필요한 노력을 생명 주기의 각 단계별로 산정
 > 유스케이스 다이어그램
   * > 확장
     * 확장대상 유스케이스를 수행할때 특정 조건에 따라 수행
@@ -53,11 +52,12 @@ Putnam 모형과 Rayleigh Noden 곡선을 기초로 개발한 자동화 추정 �
 소스코드 품질분석 도구
 ----
 > PMD (* mistacke *)
-* PMD(Programming Mistake Detector)는 응용 프로그램 코드에서 발견 된 문제를 보고 하는 오픈 소스 정적 Java 소스 코드 분석기
+* PMD(Programming Mistake Detector)
+* 응용 프로그램 코드에서 발견 된 문제를 보고 하는 오픈 소스 정적 Java 소스 코드 분석기
 > cppcheck
 *  Cppcheck는 크로스 플랫폼(윈도우, 데비안, 페도라, 맥 등)을 지원하며, 개발IDE에 플러그인으로 연동할 수 있습니다
 > sonarQube
-* 소나큐브는 20개 이상의 프로그래밍 언어에서 버그, 코드 스멜, 보안 취약점을 발견할 목적으로 정적 코드 분석으로 자동 리뷰를 수행하기 위한 지속적인 코드 품질 검사용 오픈 소스 플랫폼
+* 정적 코드 분석으로 코드 품질 검사용 오픈 소스 플랫폼
 > ccm (* complicated *)
 * 다양한 언어의 복잡도 분석
 > cobertuna
@@ -74,7 +74,7 @@ UI 설계도구
 * 버블이라고도함 (원)
 > 자표흐름
 * 화살표
-> 자료저장소
+> Data Store
 * 평행선
 > 단말 (외부개체)
 * 사각형
@@ -117,7 +117,7 @@ Agile Scrum에서 각각의 단어를 설명하시오
 > 파이프 패턴
 * 각 pipe 함수는 다음 pipe 함수로 전달하면서 작업을 처리한다. 즉, 연속적인 데이터의 흐름을 처리하는 일련의 함수들을 나열한 것
 > SOA (* oriendted *)
-* 네트워크에서 공통의 통신 언어를 사용하는 서비스 인터페이스를 활용하여 소프트웨어 구성 요소를 다시 사용할 수 있게 만드는 소프트웨어 설계 유형
+* 서비스 인터페이스를 활용하여 소프트웨어 구성 요소를 재사용할 수 있게 만드는 설계 유형
 * 표현, 비즈니스, 프로세스, 중간, 에플리케이션, 데이터저장
 
 UML 
@@ -157,13 +157,14 @@ UML
 > 라우터   
 * 컴퓨팅 디바이스와 네트워크를 다른 네트워크에 연결하는 네트워킹 디바이스
 > RAD (Rapid *)
-* Rapid Application Development - 도구로 디자인하고 Code Generator를 활용해 빠르게 개발하는 기법
+* Rapid Application Development 
+* 도구로 디자인하고 Code Generator를 활용해 빠르게 개발하는 기법
 
 테스트
 ----
 > 스텁이란?
 * 서버가 구현, 하위모듈을 대체
-* 하향식 통합테스트, 파라미터 전달
+* 하향식 통합테스트, 정해진 객체 결과값을 서버에 전달
 > 태스트 드라이버란?
 * 클라이언트가 후현, 상향모듈을 대체
 * 인자값을 넘겨주는 상향식 통합테스트
@@ -206,7 +207,8 @@ UML
 기타개념
 ----
 > Cocomo Model Line Standard
-* 5만, 30만 -> 조직, 반분리, 내장 
+* 5만, 30만 
+* 조직, 반분리, 내장 
 > Basis Path
   * 수행가능한 모든 경로 
 > DFD
@@ -220,9 +222,11 @@ UML
 > STD
 * 특정 일이 발생할 경우 시스템간의 상태 전이모델
 > SADT (* Analysis and Design *)
-* Structured Analysis and Design Techniques - 그래픽언어를 사용하여 시스템 모델을 구축 S/W 요구사항 분석과 설계를 위한 구조적 분석과 설계기법 또는 도구
+* Structured Analysis and Design Techniques 
+* 그래픽언어를 사용하여 시스템 모델을 구축 S/W 
+* 요구사항 분석과 설계를 위한 구조적 분석과 설계기법 또는 도구
 > Wavelength Division Multiplexing
-* 파장이 서로 다른 관ㅇ신호 광섬유 다중화 기술
+* 파장이 서로 다른 광신호 광섬유 다중화 기술
 
 </br></br>
 
@@ -246,7 +250,6 @@ GoF 디자인패턴의 종류
 ----
 > 3가지 분류 기준
 * 생성 / 구조 / 행위
-* (정의 / 확장 / 상호작용)
   > 생성의 네가지 종류  
     * 팩토리 , 빌더 , 프로토 , 싱글톤
     * > 팩토리   
@@ -358,21 +361,25 @@ GoF 디자인패턴의 종류
 * 상대적 대용량, 대신 속도가 늘려짐 
 > VLAN   
 * 논리적으로 분할된 스위치 네트워크 : 동적인 조직에서 작업 그룹을 구성할 수 있음
-> STP (Spannging *)
+> STP (* Tree *)
 * Spannging Tree Protocol
 * 2개 이상의 스위치가 여러 경로로 연결될때, 무한 루프 현상을 막기 위해 우선순위에 따라 1개로 통신하는 프로토콜
 > L2AN
-* OSI의 2계층에 속하는 장비로, MAC 주소를 기반으로 프레임을 전송하고 동일 네트워크 간의 연결만 가능
+* OSI의 2계층에 속하는 장비
+* MAC 주소를 기반으로 프레임을 전송하고 동일 네트워크 간의 연결만 가능
 > SDS (Software *)
-* Software Defined Storage -물리적인 데이터 스토리지를 가상화하여 여러 스토리지를 하나처럼 관리하거나, 여러 스토리지로 나눠 사용하는 소프트웨어
+* Software Defined Storage 
+* 스토리지를 가상화하여 여러 스토리지를 하나처럼 관리하거나, 여러 스토리지로 나눠 사용하는 소프트웨어
 > SDDC (* data Center)
-* Software-defined Data Center (SDDC)는 데이터센터의 모든 인프라인 네트워크, 스토리지, 컴퓨터, 보안 등이 가상화 되어 서비스로서 제공되는 차세대의 핵심적인 데이터센터 솔루션
+* Software-defined Data Center 
+* 데이터센터의 모든 인프라인 네트워크, 스토리지, 컴퓨터, 보안 등이 가상화 되어 제공되는 데이터센터 솔루션
 > MLFQ (Multi level *) 
 * Multi-level Feedback Queue - MLFQ는 여러 개의 큐로 구성되며, 각각 다른 우선순위(Priority level)가 배정된다. 
 * 실행 준비가 된 프로세스는 이 중 하나의 큐에 존재한다. MLFQ는 실행할 프로세스를 결정하기 위하여 우선순위를 사용한다. 
 * 높은 우선순위를 가진 작업, 즉 높은 우선순위 큐에 존재하는 작업이 선택된다. 
 > MQTT (Message * Transport)
-* Message Queuing Telemetry Transport - 경량 머신 대 머신 통신에 사용되는 표준 기반 메시징 프로토콜
+* Message Queuing Telemetry Transport 
+* 경량 머신 대 머신 통신에 사용되는 표준 기반 메시징 프로토콜
 * 발행 - 구독 기반의 메세징 프로토콜
 > Zingbee   
 * 소형, 저전력 디지털 라디오를 이용해 개인 통신망을 구성하여 통신하기 위한 표준 기술
@@ -385,9 +392,11 @@ GoF 디자인패턴의 종류
 > MBR(master *)   
 * master boot record - 파티션된 기억 장치(이를테면 하드 디스크)의 첫 섹터 (섹터 0)인 512 바이트 시동 섹터이다   
 > NAC (* Access *)
-* 네트워크 접근제어(Network Access Control)는 네트워크에 접속하는 장치에 대해 접속 가능 여부를 확인하여 인가된 장치만이 접속할 수 있도록 제한하는 것
+* 네트워크 접근제어(Network Access Control)
+* 인가된 장치만이 네트워크에 접속할 수 있도록 제한하는 것
 > NIC(* interface *)
-* 네트워크 인터페이스 컨트롤러(network interface controller, NIC)는 컴퓨터를 네트워크에 연결하여 통신하기 위해 사용하는 하드웨어 장치
+* 네트워크 인터페이스 컨트롤러(network interface controller, NIC)
+* 네트워크에 연결하여 통신하기 위해 사용하는 하드웨어 장치
 > Topology   
 * 단어 그 자체로 망 구성방식
 * 컴퓨터 네트워크의 요소들(링크, 노드 등)을 물리적으로 연결해 놓은 것, 또는 그 연결 방식
@@ -396,18 +405,20 @@ GoF 디자인패턴의 종류
 > FLSM (Fixed Length *)
 * Fixed Length Subnet Mask  <-> VariableLength Subnet Mask
 > ARQ (* Request)
-* ARQ는 Automatic Repeat Request의 약자로, 자동 재전송을 의미한다 쉽게 말해, 에러가 발생할 경우 재전송을 요구하는 방식이다. 
+* ARQ는 Automatic Repeat Request
+* 에러가 발생할 경우 재전송을 요구하는 방식이다. 
 > 유니캐스트 , 브로드캐스트 , 멀티캐스트, 애니캐스트
 * 유니캐스트는 한 PC에게만 보내는 1:1
 * 브로드 케스트는, 도메인 안에있는 모든 PC들에게 보내는 형태
 * 멀티캐스트는, 원하는 그룹에게만 보내는방식
 * 애니캐스트는 가장가까운 Node에게 보내는 방식
 > Wi-Sun
-* Wireless Smart Utility Network의 약자로, 일본에서는 특정 소전력 무선으로 일컬어지는 920MHz 대에서 사용
+* Wireless Smart Utility Network
+* 일본에서는 특정 소전력 무선으로 일컬어지는 920MHz 대에서 사용
 > Sliding Window
-* 일단 '윈도(메모리 버퍼의 일정 영역)'에 포함되는 모든 패킷을 전송하고, 그 패킷들의 전달이 확인되는대로 이 윈도를 옆으로 옮김(slide)으로서 그 다음 패킷들을 전송하는 방식이다
+* 일단 '윈도(메모리 버퍼의 일정 영역)'에 포함되는 모든 패킷을 전송하고, 그 패킷들의 전달이 확인되는대로 이 윈도를 옆으로 옮김(slide)으로서 그 다음 패킷들을 전송하는 방식
 > GPIB(* Purpose Interface *)
-*  General Purpose Interface Bus
+* General Purpose Interface Bus
 * PC를 통하여 계측기나 기타 장비 등 표준 프로토콜로 병렬 및 고속 제어하기 위하여 사용
 
 IPv4와 IPv6정리
@@ -515,6 +526,7 @@ DB SC 용어
 > CASCADE   
 > RESTRICTED   
 > View는 SQL의 제한이 있음   
+* View로 인덱스 생성 불가
 > 무결성과 기밀성
 * 수정과 접근의 차이
 
@@ -547,8 +559,8 @@ DB SC 용어
 ----
 > 정규화된 속성을 단순화를 위해 중복을 통합하는 활동
 * 반정규화 (집계 , 진행, 특정부분테이블을 추가)
-> OLAP (* Analytical Processing)
-* 데이터 웨어하우스, 데이터 마트 또는 기타 중앙화된 통합 데이터 저장소의 대용량 데이터를 고속으로 다차원 분석하는 소프트웨어
+> OLAP 
+* 중앙화된 통합 데이터 저장소의 대용량 데이터를 분석하는 소프트웨어
 * > 롤업(roll-up)
   * 작은 단위에서 큰 단위로 이동하는 연산(차원 낮추기)
 * > 드릴다운(drill-down)
@@ -565,6 +577,8 @@ DB SC 용어
 * 분산
 > 분산데이터 특성
 * Location / Replication / Failure / Concure
+
+
 카티션 프로덕트
 ----
 > 차수
@@ -736,7 +750,7 @@ ISO 용어 정리
 > ISO/IEC 25000
 * 소프트웨어 품질 관련 국제 표준, 2501n은 외부 품질, 2502n은 내부 품질 기준
 > ISO 12207와 SPICE 비교   
-https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=azurecourse&logNo=220041626265
+* https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=azurecourse&logNo=220041626265
 * 소프트웨어 프로세스 능력 측정 국제표준
 
 잊기 쉬운 짧은 개념들
@@ -753,7 +767,7 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=azurecourse&
 > 방식
 * > 선형 탐사
   * 선형적으로 옮겨 액세스
-* > 세곱 탐사
+* > 제곱 탐사
   * 제곱으로 이동해서 엑세스
 * > 이중해싱
   * 규칙성을 없애버려서 클러스터링 방지
@@ -773,13 +787,13 @@ https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=azurecourse&
 > 디지털 아카이빙
 * 지속적으로 보존할 가치를 가진 디지털 객체를 장기간 관리하여 이후의 이용을 보장하는 활동
 > Fcheck 
-* 파일 시스템의 상태를 체크함으로써 간단히 IDS기능을 구현한다.(파일 시스템의 무결성을 감시 한다.)
+* 파일 시스템의 상태를 체크함으로써 간단히 파일 시스템의 무결성을 감시 한다
 > 운행순서 (Root - order)
 * preorder
 * inorder
 * postorder
 > 디지털트윈
-* 디지털 트윈(Digital Twin)은 라이프사이클 전반에 걸쳐 실시간 데이터를 사용하여 업데이트되고, 시뮬레이션, 머신 러닝, 추론을 통해 의사 결정을 돕는 객체 또는 시스템의 가상 모델을 일컫습니다.
+* 라이프사이클 전반에 걸쳐 실시간 데이터를 사용하여 시뮬레이션, 머신 러닝, 추론을 통해 의사 결정을 돕는 객체 또는 가상 모델
 </br></br>
 
 # 😃 언어 개념 
@@ -861,6 +875,8 @@ DOS
 * SHA-1
 * AES
 * RSA
+
+
 코드기입오류 정리
 ----
 * Transcription
@@ -893,7 +909,8 @@ SSH
 > Secure 코딩
 * 공격자가 프로그램 코드를 실행시키게 만드는 방식 - 작동이 목적임
 > C&C Server   
-* C&C 서버는 Command & Control 서버, C2 서버, 명령제어 서버 등 다양하게 불리며 사이버 공격에서 두뇌 역할
+* Command & Control 서버 
+* 사이버 공격에서 두뇌 역할
 > Botnet   
 * 좀비 PC
 > Zero Day Attack  
@@ -901,7 +918,7 @@ SSH
 > Key Logger Attack   
 * 컴퓨터 사용자의 키보드 움직임을 탐지해서 저장하고, ID나 패스워드, 계좌 번호, 카드 번호 등과 같은 개인 중요 정보를 몰래 빼가는 해킹
 > Back Door
-* 어떤 제품이나 컴퓨터 시스템, 암호시스템 혹은 알고리즘에서 정상적인 인증 절차를 우회하는 기법이다
+* 어떤 제품이나 컴퓨터 시스템, 암호시스템 혹은 알고리즘에서 정상적인 인증 절차를 우회하는 기법
 > Brute-Force Attack   
 * 암호학 무차별 대입공격
 > Ping Flood   
@@ -911,7 +928,9 @@ SSH
 > Salt  
 * 데이터, 비밀번호, 통과암호를 해시 처리하는 단방향 함수의 추가 입력으로 사용되는 랜덤 데이터이다
 > OWASP(Open *)   
-* 오픈 소스 웹 어플리케이션 보안 프로젝트, 가장 큰 오픈소스 웹 애플리케이션 보안 프로젝트로 주로 웹에 관한 정보노출, 악성 파일 및 스크립트, 보안 취약점 등을 연구
+* 오픈 소스 웹 어플리케이션 보안 프로젝트
+* 가장 큰 오픈소스 웹 애플리케이션 보안 프로젝트
+* 웹에 관한 정보노출, 악성 파일 및 스크립트, 보안 취약점 등을 연구
 > Collision Domain   
 * 동일한 collision domain에서 하나의 PC가 통신할 경우, 다른 모든 PC는 통신이 불가
 > CSMA/CA  (A) 
@@ -940,21 +959,26 @@ SSH
 * S-HTTP는 웹상에서 네트워크 트래픽을 암호화하는 주요 방법 중 하나이다. 
 * 웹상에서 네트워크 트래픽을 암호화하는 것에는 주로 2가지 방법을 사용하는데 한 가지는 S-HTTP 이고 다른 하나는 SSL이다.
 > ESB (Enterprise * Bus)
-* ESB는 물리적으로 분산된 서비스 component 들을 통합여여 연동할 수 있도록 표준화된 메시지 버스와 프로토콜을 이용해서 서로 연동할 수 있는 시스템
+* 표준화된 메시지 버스와 프로토콜을 이용해서 서로 연동할 수 있는 시스템
 > Pharming
-* 악성코드에 감염된 PC를 조작해, 이용자가 인터넷 '즐겨찾기' 또는 포털사이트를 통해 금융회사 홈페이지에 접속하여도 피싱(가짜)사이트로 유도되어 금융정보를 탈취하여 유출된 정보로 예금인출하는 방식
+* 피싱(가짜)사이트로 유도, 금융정보를 탈취하여 유출된 정보로 예금인출하는 방식
 > Trin00
 * trinoo 또는 trin00은 DDoS 공격을 수행하기 위한 일련의 컴퓨터 프로그램
+
+<br/>   
+
 기타 외워야하는 Service및 기술들
+----
 > Stacheldraht
 * 분산서비스 거부공격을 하는 멜웨어
 > TFN(* Network)
-* Tribe Flood Network은 ICMP Flood, SYN Flood, UDP Flood 및 Smurf 공격과 같은 다양한 DDoS 공격을 수행하는 컴퓨터 프로그램 집합
+* Tribe Flood Network
+* 다양한 DDoS 공격을 수행하는 컴퓨터 프로그램 집합
 > Nimda
-* 님다는 2001년 9월에 발생한 컴퓨터 바이러스이다. 미국, 유럽, 라틴아메리카에서 동시에 발생하였고, 단 22분만에 인터넷에 가장 넓게 확산된 악성 바이러스로 막대한 경제적 손실을 발생시켰다
+* 님다는 2001년 9월에 발생한 컴퓨터 바이러스이다
 > PIMS(Personal Information *)
 * Personal Information Management System
-* 기업이 개인정보 보호 활동을 체계적, 지속적으로 수행하기 위해 필요한 보호조치 체계를 구축하였는지 점건하여 일정 수준 이상의 기업에 인증을 부여하는 제도
+* 기업이 개인정보 보호 활동을 체계적, 지속적으로 수행하기 위해 점검하여 일정 수준 이상의 기업에 인증을 부여하는 제도
 > QKD(Quantum *)
 * Quantum Key Distribution 
 * 양자 물리학의 기본 원리를 활용하여 검증 가능한 보안으로 광섬유 네트워크를 통해 암호화 키를 교환하는 기술
@@ -962,7 +986,6 @@ SSH
 * 사용자의 동의를 받아 다운받는 (불편함을 유발) 프로그램 - adware가 속함
 > Mashup
 * Web info -> new System
----
 > 타조   
 * 하둡(Hadoop) 기반의 분산 데이터 웨어하우스 프로젝트
 > 원세그
@@ -970,7 +993,7 @@ SSH
 > 포스퀘어   
 * 위치 기반 소셜 네트워크 서비스이자 이를 개발한 회사의 명칭
 > ASLR  
-* Address Space Layout Randomization의 줄임말입니다. 
+* Address Space Layout Randomization
 * 주소 공간 배열 무작위화. 말 그대로 주소를 매번 실행할 때마다 무작위화시켜 공격을 방해 
 > Sqoop 
 * Hadoop과 관계형 데이터베이스 간에 데이터를 전송할 수 있도록 설계된 오픈소스 소프트웨어  
@@ -982,19 +1005,16 @@ SSH
 * Micro Electro Mechanical Systems (미세 전기 기계 시스템)의 약자
 * 미세한 입체 구조 (3차원 구조)를 지니며, 다양한 입력 · 출력 신호를 취급하는 시스템의 총칭
 > evil twin attack
-* 이블 트윈은 로그온한 사람들을 속이고 비밀번호나 신용카드 번호를 훔치기 위해 합법적인 네트워크인 것처럼 가장한 무선 네트워크
+* 로그온한 사람들을 속이고 비밀번호나 신용카드 번호를 훔치기 위해 합법적인 네트워크인 것처럼 가장한 무선 네트워크
 > phisihing
 * 컴퓨팅에서 피싱(phishing)은 전자우편 또는 메신저를 사용해서 신뢰할 수 있는 사람 또는 기업이 보낸 메시지인 것처럼 가장
-* 비밀번호 및 신용카드 정보와 같이 기밀을 요하는 정보를 부정하게 얻으려는 소셜 엔지니어링(social engineering)의 한 종류
+* 비밀번호 및 신용카드 정보와 같이 기밀을 요하는 정보를 부정하게 얻으려는 소셜 엔지니어링
 > cyberbulling
 * 특정 메신저에 특정 학생을 초대해서 단체로 괴롭히는 행동
 > tripwire
-* tripwire는 먼저 시스템에 존재하는 파일에 대해 데이터 베이스를 만들어 저장한 후 생성된 데이터베이스와 비교하여 추가·삭제되거나 변조된 파일이 있는지 점검하고 관리자에게 레포팅해주는 무결성 검사도구
+* 먼저 시스템에 존재하는 파일에 대해 데이터 베이스를 만들어 저장한 후 생성된 데이터베이스와 비교
+* 추가·삭제되거나 변조된 파일이 있는지 점검하고 관리자에게 레포팅해주는 무결성 검사도구
 > MapReduce
-* Hadooop의 흩어져 있는 데이터를 수직화 -> 그 데이터를 각각의 종류별로 모으고(Map) -> 필터링과 정렬을 거쳐 데이터를 추출(Reduce)하는 분산처리 기술과 관련된 Framework를 의미
-
-카테고리화가 되지 않은 CS관련 IMG
-----
+* 필터링과 정렬을 거쳐 데이터를 추출(Reduce)하는 분산처리 기술과 관련된 Framework를 의미
 >  NS Chart
 * http://itnovice1.blogspot.com/2019/08/nsnassi-schneiderman.html
-> AVL 다이어그램
