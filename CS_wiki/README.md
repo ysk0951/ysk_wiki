@@ -248,12 +248,15 @@
 * Solo Responsibility
 > O
 * Open-close
+* 확장에는 열려있어야 하고, 변경에는 닫혀 있어야 함
 > L
 * Liskov : super()
 > I
 * Interface Segregation
+* 상위 타입 객체를 하위 타입 객체로 치환해도 정상적으로 동작해야 함
 > D
 * Dependency : child -> parent
+* 구체화된 클래스에 의존하기 보다는 추상 클래스나 인터페이스에 의존해야 한다는 뜻
 > 객체지향 설계분석론   
 > Wrfs-Block
 * 분석과 설계의 구분없이 고객명세서부터 설계작업까지 연속적 수행을 하는 설계론
