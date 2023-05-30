@@ -626,6 +626,42 @@ GoF 디자인패턴의 종류
     * 테스트, 오픈, 운영 전단계 성능 모니터링
 
 ## Chapter 06 
+> 사용자 인터페이스 구분
+* CLI, GUI, NUI
+> NUI
+* > Pan   
+  * Touch, Hold, Move
+* > Flick   
+  * Quickly Brush
+* > Pinch   
+  * Touch surface with Two Fingers and bring then closer or apart
+
+> 기본원칙
+* 직관성
+* 유효성
+* 학습성
+* 유연성
+
+> 와이어프레임 
+* 레이아웃만
+> 목업 
+* 실제화면 정적형태
+> 스토리보드 
+* 와이어 프레임에 페이지간 이동흐름, 컨텐츠 설명 추가
+> 프로토타입    
+* 실제 구현도니것처럼 테스트 가능한 모형
+
+> UI 설계 순서
+* 요구사항 확인
+* UI 구조 설계
+* 메뉴 구조(사이트맵) 설계
+* 화면 설계
+
+> UX특징
+* 주관성
+* 정황성
+* 총체성
+
 ## Chapter 07
 ## Chapter 08 
 ## Chapter 09 
@@ -644,14 +680,6 @@ GoF 디자인패턴의 종류
 * 설계의 세부사항, 인터페이스의 완성도가 아님  
 * **결합의 여부**가 상향식이냐 하향식이냐
 
-NUI List
-----
-> Pan   
-* Touch, Hold, Move
-> Flick   
-* Quickly Brush
-> Pinch   
-* Touch surface with Two Fingers and bring then closer or apart
 소스코드 품질분석 도구
 ----
 > PMD (* mistacke *)
@@ -665,11 +693,6 @@ NUI List
 * 다양한 언어의 복잡도 분석
 > cobertuna
 * 자바 언어의 소스코드 복잡도 분석 및 테스트 커버리지 측정
-
-UI 설계도구
------  
-> 와이어프레임~프로토타입의 순서를 설명하시오  
-* 와이어프레임 > 목업 > 스토리보드 > 프로토타입    
 
 테스트
 ----
