@@ -2,8 +2,7 @@
 
 ## Chapter 01
 > 소프트웨어 생명주기의 정의
-* 소프트웨어를 개발하기 위해 []등의 과정을 단계별로 나눈것
-* 설계, 운용, 유지보수
+* 소프트웨어를 개발하기 위해 설계, 운용, 유지보수 과정을 단계별로 나눈것
 > 소프트웨어 개발방법론의 4가지 정의
 * 폭포수
 * 프로토타입 
@@ -814,6 +813,49 @@ GoF 디자인패턴의 종류
 * 추상화
 
 ## Chapter 08 
+> DDL
+* > CREATE
+  * CREATE SCHEMA 이름 AUTHORIZATION ID
+  * CREATE DOMAIN 이름 AS 데이터타입 DEFAULT CONSTRAINT
+  * CREATE VEIW 뷰명 AS SELECT WITH CHECK OPTION
+  * CREATE INDEX ON 테이블명  
+  * CREATE TABLE 테이블명 ()
+* > ALTER   
+  * ALTER ADD
+  * ALTER DROP COLUMN
+* > DROP   
+
+> DCL
+* [DCL] [전치사]
+* GRANT 사용자등급 to 사용자_ID_리스트;
+* GRANT SELECT ON 고객 TO 홍길동;
+* GRANT ALL ON 학생 TO 홍길동 WITH GRANT OPTION;
+* REVOKE SELECT ON 교수 FROM 박문수 CASCADE; (연쇄삭제)
+* ROLLBACK TO S2;
+
+> DML
+* > INSERT
+  * INSET INTO 테이블 VALUES();
+* > DELETE
+* > UPDATE SET
+* > SELECT
+  * [SELECT] [PREDICATE] table [OPTIONS]
+  * > LIKE PATTERN
+    * _ , %
+  * > GROUP Function
+    * COUNT, SUM, AVG
+  * > WINDOW Function 총정리
+    * Group By 이용하지 않고 속성값 집계
+    * COUNT, SUM, AVG, MAX, MIN, STDDEV, VARIANCE, ROLLUP, CUBE
+  * > 집합연산자
+    * UNION, UNIONALL, INTERSECT, EXCEPT
+  * > JOIN
+    * OUTER - 만족하지 않아도 출력
+    * INNER - 만족해야 출력
+> 트리거
+  * DECLARE , EVENT, BEGIN , CONTROL , SQL , EXCEPTION , END
+  * CREATE TRIGGER 학년정보_tri BEFORE INSTERT ON 학생 REFERENCING NEW AS new_table FOR EACH ROW WHEN (new_table.학년 IS NULL) BEGIN new_table 학년 := '신입생' END
+
 ## Chapter 09 
 ## Chapter 10
 ## Chapter 11
