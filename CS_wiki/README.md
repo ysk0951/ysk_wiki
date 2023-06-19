@@ -92,7 +92,8 @@
 * 0,1
 
 ## Section : 응용SW 기초 기술활용
-> 윈도우 특징 5가지 (POS2선)
+> 윈도우 특징 5가지 
+* [POS2선]
 * Plug and Play
 * OLE (object linking and Embedding)
 * Single User 시스템
@@ -100,9 +101,12 @@
 * 선점형 멀티태스킹
 
 #### 페이지 교체 알고리즘
-* 최소 - Least
-* 빈도 - Frequently
-* 최근 - Recently
+> 최소 
+* Least
+> 빈도 
+* Frequently
+> 최근 
+* Recently
 ----
 > 가장먼저들어온걸 교체   
 * FIFO
@@ -146,16 +150,16 @@
 * chmod 775 file.txt
 > 소유자
 * chown user12 media.txt
-> umask
-* 초기 권한 설정값으로 파일은 666, 폴더는 777 에서 뺴는값
-> 쉘스크립트 Export
-* 환경변수를 설정
-> fork
-* 새로운 프로세스 생성
-> fsck
-* 파일시스템을 검사 / 보수
-> netcat
-* TCP 또는 UDP를 사용하여 네트워크 연결을 읽거나 기록하는 컴퓨터 네트워킹 유틸리티
+> 초기 권한 설정값으로 파일은 666, 폴더는 777 에서 뺴는값
+* umask
+> 환경변수를 설정
+* 쉘스크립트 Export
+> 새로운 프로세스 생성
+* fork
+> 파일시스템을 검사 / 보수
+* fsck
+> TCP 또는 UDP를 사용하여 네트워크 연결을 읽거나 기록하는 컴퓨터 네트워킹 유틸리티
+* netcat
 > cron
 * job scheduler
 > SetUID
@@ -194,6 +198,8 @@
 > HRN 
 * Hightest Response-ratio Next 
 * (대기시간 + 서비스시간) / 서비스시간
+</br>
+
 > 한 PC에게만 보내는 1:1 형대
 * 유니캐스트 
 > 도메인 안에있는 모든 PC들에게 보내는 형태
@@ -300,48 +306,56 @@
 * 리치 인터넷 어플리케이션
 > 애플리케이션을 일반 구역과 보안구역으로 분할하여 관리
 * 트러스트존 
-> 센서, 액추에이터 기반 초정밀 반도체 지조 기술을 바탕으로한 초미세 장치
+> 센서, 액추에이터 기반 초정밀 반도체 기술을 바탕으로한 초미세 장치
 * MEMS
 > 메타 데이터    
 > 기존 데이터에 소비자와의 상호작용을 통해 새로운 가치가 더해진 데이터
 * 브로드 데이터
 
 ## Section : SQL
-> DDL
-* CREATE SCHEMA 이름 AUTHORIZATION ID
-* CREATE DOMAIN 이름 AS 데이터타입 DEFAULT CONSTRAINT
-* CREATE VEIW 뷰명 AS SELECT WITH CHECK OPTION
-* CREATE INDEX ON 테이블명  
-* CREATE TABLE 테이블명 ()
-* ALTER ADD
-* ALTER DROP COLUMN
-* DROP TABLE table_name
+DDL
+----
+> CREATE SCHEMA 이름 AUTHORIZATION ID     
+> CREATE DOMAIN 이름 AS 데이터타입 DEFAULT CONSTRAINT     
+> CREATE INDEX ON 테이블명       
+> VIEW (삽입 연산 뷰 정의조건)
+* CREATE VIEW 이름 AS 쿼리 WITH 체크옵션
+* CREATE VIEW 3학년 학생(강좌명, 학점, 학기) AS SELECT * FROM 학생 WITH CHECK OPTION     
+> TABLE 
+* CREATE TABLE 직원 ()
+> ALTER 
+* ALTER TABLE 학생 ADD 주소 CHAR(20);
+* ALTER TABLE 학생 DROP 주소 
+> DROP 
+* DROP TABLE 직원;
 
-> DCL
-* GRANT 사용자등급 to 사용자_ID_리스트;
-* GRANT SELECT ON 고객 TO 홍길동;
+DCL
+----
+> GRANT
+* GRANT 권한 ON 어디에 TO 누구에게
 * GRANT ALL ON 학생 TO 홍길동 WITH GRANT OPTION;
 * REVOKE SELECT ON 교수 FROM 박문수 CASCADE; (연쇄삭제)
+> ROLLBACK
 * ROLLBACK TO S2;
 
-> DML
-* > INSERT
-  * INSET INTO 테이블 VALUES();
-* > DELETE
-* > UPDATE SET
-* > SELECT
-  * [SELECT] [PREDICATE] table [OPTIONS]
-  * > LIKE PATTERN
-    * _ , %
-  * > GROUP Function
-    * COUNT, SUM, AVG
-  * > COUNT, SUM, AVG, MAX, MIN, STDDEV, VARIANCE, ROLLUP, CUBE
-    * WINDOW Function
-  * > UNION, UNIONALL, INTERSECT, EXCEPT
-    * 집합연산자
-  * > JOIN
-    * OUTER - 만족하지 않아도 출력
-    * INNER - 만족해야 출력
+DML
+----
+> INSERT
+* INSET INTO 테이블 VALUES();
+> DELETE
+* DELETE FROM 상품 WHERE 제품코드 = "P-20"
+> UPDATE SET
+> SELECT
+* [SELECT] [PREDICATE] table [OPTIONS]
+* > LIKE PATTERN
+  * _ , %
+* > GROUP Function (COUNT, SUM, AVG)
+  * SELECT AVG(장학금) FROM 장학금 GROUP BY CUBE(장학내역, 학과);
+* > UNION, UNIONALL, INTERSECT, EXCEPT
+  * 집합연산자
+* > JOIN
+  * OUTER - 만족하지 않아도 출력
+  * INNER - 만족해야 출력
 
 > 트리거
   * create or replace trigger insipgo  
@@ -400,6 +414,8 @@
 * 단위 테스트
 </br>
 
+> 비점진적 통합테스트
+* 빅뱅 통합테스트
 > 점진적 통합테스트
 * > 상향식
   * 하위모듈을 클러스터로 결합
@@ -410,13 +426,11 @@
   * 하위모듈 스텁으로 대체
   * 회귀 테스트 실시
 * 혼합식
-> 비점진적 통합테스트
-* 빅뱅 통합테스트
 > 스텁이란?
 * 서버가 구현, 하위모듈을 대체
 * 하향식 통합테스트, 정해진 객체 결과값을 서버에 전달
 > 태스트 드라이버란?
-* 클라이언트가 후현, 상향모듈을 대체
+* 클라이언트가 구현, 상향모듈을 대체
 * 인자값을 넘겨주는 상향식 통합테스트
 
 #### 테스트 오라클 
@@ -429,27 +443,31 @@
 * 휴리스틱 오라클 
 > 이전 수행결과와 현재 수행결과가 동일한지 검증
 * 일관성 검사 오라클
+
 > 테스트가 실행될 환경을 시뮬레이션 하여 컴포넌트와 모듈 테스트
 * 테스트 하네스
 * 하네스의 구성요소로 드라이버와 스텁이 있음
-> 결함 분류 (시기문G)
+> 결함 분류 
+* 시기지문
 * 시스템
 * 기능
 * GUI
 * 문서
 
-> 애플리케이션 성능 측정 지표
+> 애플리케이션 성능 측정 지표 
+* [자처응경]
 * 자원사용률
 * 처리량
 * 응답시간
 * 경과시간 (처리가 완료될때까지만 측정)
 
 > 클린 코드 작성원칙
+* [추가의 중단]
+* 추상화
 * 가독성
-* 단순성
 * 의존성 배제
 * 중복성 최소화
-* 추상화
+* 단순성
 
 ## Section : 소프트웨어 개발 보안 구축
 
@@ -458,8 +476,8 @@
 #### 양방향
 ----
 > 비공개키(대칭키)   
+* 송수신자가 같은키
 * Stream , Block 방식
-* 송수신자가 같은키를 가지고있어서 키교환이 가장 중요한부분
 * DES/ AES / SEED
 > 공개키(비대칭키)
 * > Public으로 암호화
@@ -506,14 +524,17 @@
   * 신원검증된 사용자게에 서비스 허용
 * > Accounting 
   * 사용자의 기록을 보관
+
+Bluetooth Attack
+----
 > 원격조정, 전화, 감청
-* Buletooth Bug 
+* Bluetooth Bug 
 > 파일에 접근
-* Buletooth narf (허겁지겁먹다)
+* Bluetooth narf (허겁지겁먹다)
 > 검색을 하는 활동
-* Buletooth Printing 
+* Bluetooth Printing 
 > 명함을 익명으로 퍼뜨림
-* Buletooth Jacking 
+* Bluetooth Jacking 
 > ICMP(error)를 활용하여 집중적으로 대용량 데이터 공격
 * smurfing 
 > 정상크기보다 큰 ICMP를 쪼개서 보내어 패킷을 처리하게 만듬
@@ -591,6 +612,7 @@
 * DB Server
 * File Server
 > 웹서버기능
+* [대가인H]
 * 대역폭제한
 * 가상 호스팅
 * 인증
@@ -654,7 +676,7 @@
   * 상태다이어그램 이용
 * > 기능모델링
   * 자료흐름도를 이용
-> SOLID   
+> SOLID (LS/IS/DI)
 * Single responsibility principle
 > O
 * Open-close principle
@@ -789,7 +811,9 @@
   * 빌더
 * > 원본객체를 복사
   * 프로토
-* > 싱글톤   
+* > 싱글톤 
+</br>
+
 > 구조
 * > 호환성 없는 클래스들을 이용할수 있도록 변환
   * 어뎁터
@@ -805,28 +829,30 @@
   * 퍼싸드
 * > 인스턴스를 가능한한 공유해서 씀
   * 플라이웨이트
+</br>
+
 > 행위
 * > 객체가 둘 이상 존재하면, 한객체가 처리하지 못할시에 다음으로 넘어가는 패턴
   * 책임연쇄
-* > 변화하는 상태를 전달
+* > 🔥 변화하는 상태를 전달
   * 옵저버
-* > 객체의 상태값에 따라서 동일한 동작을 다르게 처리
+* > 🔥 객체의 상태값에 따라서 동일한 동작을 다르게 처리
   * 상태
-* > 데이터 구조에서 처리기능을 분리, 별도의 클래스로 구성하는 패턴
+* > 🔥 데이터 구조에서 처리기능을 분리, 별도의 클래스로 구성하는 패턴
   * 방문자
-* > 요청을 객체의 형태로 캡슐화 하고, 로그에 남기는 패턴
+* > 🔥 요청을 객체의 형태로 캡슐화 하고, 로그에 남기는 패턴
   * 커맨드
-* > 언어에 문법 표현을 정의
+* > 🔥 언어에 문법 표현을 정의
   * 인터프리터
-* > 동일한 인터페이스를 사용
+* > 🔥 동일한 인터페이스를 사용
   * 반복자
-* > 수많은 객체간의 복잡한 상호작용을 캡슐화
+* > 🔥 수많은 객체간의 복잡한 상호작용을 캡슐화
   * 중재자
-* > 특정 시점의 객체 내부상태를 객체화
+* > 🔥 특정 시점의 객체 내부상태를 객체화
   * 메멘토
-* > 동일계열 알고리즘을 개별적으로 캡슐화
+* > 🔥 동일계열 알고리즘을 개별적으로 캡슐화
   * 전략
-* > 상위 클래스에서 골격을 정의, 하위클래스에서 세부처리
+* > 🔥 상위 클래스에서 골격을 정의, 하위클래스에서 세부처리
   * 템플릿메소드
 > IDEA
 * JetBrains에서 만든 멀티 플랫폼 IDE
@@ -869,6 +895,7 @@
 * 논리(스키마)
 * 물리(테이블)
 * 구현
+
 #### 데이터모델
 ----
 > 표시요소
@@ -924,6 +951,7 @@
   * Division
   * Project
   * Select
+  * DIVISION을 꼭 기억 https://velog.io/@khs0415p/8-%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%97%B0%EC%82%B0
 > 반정규화     
 > 트랜잭션 특징
 * 원자성
@@ -944,13 +972,12 @@
 * 장애
 * ~가 일어나더라도 유지
 > 접근통제 
-* Discretionary Access Control - 신원에 근거
-* Mandatory Access Control - 강제접근통제
-* Role Based Access Control - 역활기반
-> 접근통제 3요소 
-* 정책
-* 메커니즘
-* 보안모델
+* > Discretionary Access Control 
+  * 신원에 근거
+* > Mandatory Access Control 
+  * 강제접근통제
+* > Role Based Access Control  
+  * 역활기반
 > 스토리지 3가지
 * DAS
 * NAS
@@ -999,8 +1026,11 @@
 ----
 > XML 교환 통신규약
 * SOAP
+* Simple Object Access Protocol
 > XML로 작성되는 웹서비스 서식
 * WSDL
+* Web Services Description Language
+</br>
 
 ## Section : 요구사항 확인
 > 소프트웨어 생명주기의 정의
