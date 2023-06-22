@@ -103,7 +103,7 @@
 #### 페이지 교체 알고리즘
 > 최소 
 * Least
-> 빈도 
+> 최근 참조
 * Frequently
 > 최근 
 * Recently
@@ -1120,6 +1120,7 @@ Bluetooth Attack
 * 의존 - 의존이 좀 독특
 * 집합
 * 포함
+* https://kyoun.tistory.com/100
 > 클래스안에 {}를 이용하는것은 무엇인가
 * 제약조건
 > 연관클래스의 개념
