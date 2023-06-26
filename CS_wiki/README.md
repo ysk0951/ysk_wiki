@@ -241,8 +241,9 @@
 
 > IP to MAC Address (Address Resolution Protocol) 프로토콜
 * ARP(Address * *)
-> Internet Control Message Protocol
-* ICMP (* Message Protocol)
+> 에러메세지 전달 프로토콜
+* ICMP
+* Internet Control Message Protocol
 > 각각 서버와 클라이언트가 둘다 될수있는 방식(Point to Point)의 프로토콜
 * Point to Point
 > TCP/UDP
@@ -332,6 +333,7 @@ DDL
 > CREATE SCHEMA 이름 AUTHORIZATION ID     
 > CREATE DOMAIN 이름 AS 데이터타입 DEFAULT CONSTRAINT     
 > CREATE INDEX ON 테이블명       
+* CREATE INDEX idx_name ON Student(name);
 > VIEW (삽입 연산 뷰 정의조건)
 * CREATE VIEW 이름 AS 쿼리 WITH 체크옵션
 * CREATE VIEW 3학년 학생(강좌명, 학점, 학기) AS SELECT * FROM 학생 WITH CHECK OPTION     
@@ -366,6 +368,7 @@ DML
   * _ , %
 * > GROUP Function (COUNT, SUM, AVG)
   * SELECT AVG(장학금) FROM 장학금 GROUP BY CUBE(장학내역, 학과);
+  * SELECT 과목 MIN(점수) as 최소 점수 FROM 성적 GROUP BY 과목이름 HAVING AVG(점수) >= 90;
 * > UNION, UNIONALL, INTERSECT, EXCEPT
   * 집합연산자
 * > JOIN
@@ -401,7 +404,7 @@ DML
 > 문장 
 * 소스코드의 모든 구문이 한번 이상 수행
 > 분기
-* 모든 조건문에 대한 조건식 테스트 케이스 설계
+* True와 False가 한번씩 사용되는 테스트 케이스
 > 조건
 * 개별 조건문에 대한 조건식 테스트 케이스 설계 
 
@@ -448,10 +451,8 @@ DML
 * 혼합식
 > 스텁이란?
 * 서버가 구현, 하위모듈을 대체
-* 하향식 통합테스트, 정해진 객체 결과값을 서버에 전달
 > 태스트 드라이버란?
 * 클라이언트가 구현, 상향모듈을 대체
-* 인자값을 넘겨주는 상향식 통합테스트
 
 #### 테스트 오라클 
 ----
@@ -475,7 +476,7 @@ DML
 * 문서
 
 > 애플리케이션 성능 측정 지표 
-* [자처응경]
+* (응답과 경과의 차이)
 * 자원사용률
 * 처리량
 * 응답시간 (응답이 도착할때까지만 측정)
@@ -597,13 +598,11 @@ Bluetooth Attack
 * OWASP
 > 미국의 전자서명 표준이다
 * DSA   
-> IPSec  
-* AH , ESP
+> AH , ESP
+* IPSec  
 * 터널모드와 전송모드
 * 전송모드는 헤더로르 제외한 페이로드만 보호
 * 터널모드는 전체 패킷을 보호
-> port Scanning 툴(해킹방어)
-* nmap  
 > 세션이 활성화된상태(로그인)을 가로채는것
 * 세션하이재킹
 > ACK Storm
@@ -982,7 +981,7 @@ Bluetooth Attack
 * 정규화된 데이터를 중복, 통합, 분리하는 과정으로 의도적으로 정규화 원칙을 위배하는것     
 > 트랜잭션 특징
 * 원자성
-* 독립성
+* 독립성 : 다른트랜잭션에서 접근 불가
 * 일관성
 * 영속성
 > 조인등을 통하여 새로운 테이블을 자유로이 유도하고싶을때
@@ -1383,6 +1382,9 @@ Bluetooth Attack
   * > 제니퍼
     * 테스트, 오픈, 운영 전단계 성능 모니터링
 
+> 앱 실행하지 않고 결함을 발견하기 위해 사용하는 도구
+* 정적분석도구
+
 ## Section : 제품소프트웨어 패키징
 > DRM
   * > 클리어링 하우스
@@ -1456,248 +1458,3 @@ Bluetooth Attack
 <br/>
 <br/>
 <br/>
-
-
-## 나머지 개념들
-> PMD (* mistacke *)
-* PMD(Programming Mistake Detector)
-* 응용 프로그램 코드에서 발견 된 문제를 보고 하는 오픈 소스 정적 Java 소스 코드 분석기
-> cppcheck
-* Cppcheck는 크로스 플랫폼(윈도우, 데비안, 페도라, 맥 등)을 지원하며, 개발IDE에 플러그인으로 연동할 수 있습니다
-> sonarQube
-* 정적 코드 분석으로 코드 품질 검사용 오픈 소스 플랫폼
-> ccm (* complicated *)
-* 다양한 언어의 복잡도 분석
-> cobertuna
-* 자바 언어의 소스코드 복잡도 분석 및 테스트 커버리지 측정
-> FTR (Formal Technical Review)
-* 검토에만 집중하기 위해, 검토 이외의것을 모두 제한하는 방식(논쟁,인원 등등)
-> Revese Engineering
-* 일반적인 개발 단계와는 반대로 기존 코드를 복구하거나 소프트웨어 관계를 추출하는 방식
-> Alien Code
-* 참고문서와 관리하는 개발자가 없어 유지보수가 어려운 프로그램 코드
-> 화이트박스 검사, 블랙박스 검사
-* 실행 경로의 기초(내부적)를 정의하는 검사와, 내부를 보지않고 입력과 출력에 중점을 둔 검사의 차이
-> 알파테스트 , 베타테스트
-* 내부테스트(개발진, QA) , 상용테스트(일반인)   
-> FAT -> NTFS
-* 상대적 대용량, 대신 속도가 늘려짐 
-> VLAN   
-* 논리적으로 분할된 스위치 네트워크 : 동적인 조직에서 작업 그룹을 구성할 수 있음
-> STP (* Tree *)
-* Spannging Tree Protocol
-* 2개 이상의 스위치가 여러 경로로 연결될때, 무한 루프 현상을 막기 위해 우선순위에 따라 1개로 통신하는 프로토콜
-> L2AN
-* OSI의 2계층에 속하는 장비
-* MAC 주소를 기반으로 프레임을 전송하고 동일 네트워크 간의 연결만 가능
-> SDS (Software *)
-* Software Defined Storage 
-* 스토리지를 가상화하여 여러 스토리지를 하나처럼 관리하거나, 여러 스토리지로 나눠 사용하는 소프트웨어
-> SDDC (* data Center)
-* Software-defined Data Center 
-* 데이터센터의 모든 인프라인 네트워크, 스토리지, 컴퓨터, 보안 등이 가상화 되어 제공되는 데이터센터 솔루션
-> MLFQ (Multi level *) 
-* Multi-level Feedback Queue - MLFQ는 여러 개의 큐로 구성되며, 각각 다른 우선순위(Priority level)가 배정된다. 
-* 실행 준비가 된 프로세스는 이 중 하나의 큐에 존재한다. MLFQ는 실행할 프로세스를 결정하기 위하여 우선순위를 사용한다. 
-* 높은 우선순위를 가진 작업, 즉 높은 우선순위 큐에 존재하는 작업이 선택된다. 
-> MQTT (Message * Transport)
-* Message Queuing Telemetry Transport 
-* 경량 머신 대 머신 통신에 사용되는 표준 기반 메시징 프로토콜
-* 발행 - 구독 기반의 메세징 프로토콜
-> Zingbee   
-* 소형, 저전력 디지털 라디오를 이용해 개인 통신망을 구성하여 통신하기 위한 표준 기술
-> MBR(master *)   
-* master boot record - 파티션된 기억 장치(이를테면 하드 디스크)의 첫 섹터 (섹터 0)인 512 바이트 시동 섹터이다   
-> NIC(* interface *)
-* 네트워크 인터페이스 컨트롤러(network interface controller, NIC)
-* 네트워크에 연결하여 통신하기 위해 사용하는 하드웨어 장치
-> Topology   
-* 단어 그 자체로 망 구성방식
-* 컴퓨터 네트워크의 요소들(링크, 노드 등)을 물리적으로 연결해 놓은 것, 또는 그 연결 방식
-> SNMP (Simple Network *)
-*  UDP/IP(사용자 데이터그램 프로토콜/인터넷 프로토콜)를 사용하여 이더넷 연결을 통해 네트워크 관리 작업을 수행하는 응용 계층 프로토콜 
-> FLSM (Fixed Length *)
-* Fixed Length Subnet Mask  <-> VariableLength Subnet Mask
-> ARQ (* Request)
-* ARQ는 Automatic Repeat Request
-* 에러가 발생할 경우 재전송을 요구하는 방식이다. 
-> Wi-Sun
-* Wireless Smart Utility Network
-* 일본에서는 특정 소전력 무선으로 일컬어지는 920MHz 대에서 사용
-> Sliding Window
-* 일단 '윈도(메모리 버퍼의 일정 영역)'에 포함되는 모든 패킷을 전송하고, 그 패킷들의 전달이 확인되는대로 이 윈도를 옆으로 옮김(slide)으로서 그 다음 패킷들을 전송하는 방식
-> GPIB(* Purpose Interface *)
-* General Purpose Interface Bus
-* PC를 통하여 계측기나 기타 장비 등 표준 프로토콜로 병렬 및 고속 제어하기 위하여 사용
-> 병렬 데이터베이스 수평분할   
-> 데이터 튜닝기법
-  * > 목록분할
-    * 특정 칼럼을 기준으로 파티셔닝
-  * > 조합분할
-    * 여러가지를 조합하여(합성) 파티셔닝
-  * > 해시분할
-    * 해시 함수를 적용하여 파티셔닝
-  * > 범위분할
-    * 범위에 있는지 여부로 파티셔닝
-  * > 라운드 로빈
-    * 행의 고른 분포로 파티셔닝
-> OLAP 
-* 중앙화된 통합 데이터 저장소의 대용량 데이터를 분석하는 소프트웨어
-* > 롤업(roll-up)
-  * 작은 단위에서 큰 단위로 이동하는 연산(차원 낮추기)
-* > 드릴다운(drill-down)
-  * 큰 단위에서 작은 단위로 세분화, 롤업 프로세스의 반대(차원 높이기)
-* > 슬라이스(slice, slicing)
-  * 큐브의 한 조각을 연산, 큐브의 한 단면 보기(1개 차원 선택)
-* > 다이스(dice, dicing)
-  * 슬라이스와 비슷, 하위 큐브 만들기 위해 2개 이상 차원 선택
-* > 피벗(pivot)
-  * 데이터 축을 회전하여 제공
-> 분산데이터 특성
-* Location / Replication / Failure / Concure
-> 프로세스 상태 순서
-* Submit
-* Hold
-* Ready
-* Run
-* Wait
-* Block
-* Terminated
-> SecureOS
-* 컴퓨터 사용자에 대한 식별 및 인증, 강제적 접근 통제, 임의적 접근 통제, 재사용 방지, 침입 탐지 등의 보안 기능 요소를 갖추어진 운영체제
-
-
-#### ISO 용어 정리
-----
-> ISO/IEC 25000
-* 소프트웨어 품질 관련 국제 표준, 2501n은 외부 품질, 2502n은 내부 품질 기준
-> ISO 12207와 SPICE 비교   
-* https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=azurecourse&logNo=220041626265
-* 소프트웨어 프로세스 능력 측정 국제표준
-
-#### 잊기 쉬운 짧은 개념들
-----
-> Hash함수
-* HAVAL , SHA-1
-> 기수변환
-* 다른 진법으로 간주하고 키를 변환하여 홈 주소를 얻는 방법
-> 폴딩
-* 키값을 여러부분으로 나눈후 각부분의 값을 더하거나 XOR연산후 주소
-> CIDR 서브넷마스크 계산법
-* /(1의 갯수) 와 옥텟을 기억
-> 방식
-* > 선형 탐사
-  * 선형적으로 옮겨 액세스
-* > 제곱 탐사
-  * 제곱으로 이동해서 엑세스
-* > 이중해싱
-  * 규칙성을 없애버려서 클러스터링 방지
-* > 전위식, 후위식
-  * 연산가능한것을 해당방향으로 묶는것
-* > 스키마 종류 (관점)
-  * > 개념 스키마
-    * 데이터 베이스의 전체적인 논리구조
-  * > 내부 스키마
-    * 데이터베이스의 물리적 저장구조를 정의
-  * > 외부 스키마
-    * 사용자나 응용프래그래머가 개인의 입장에서 필요한 데이터 베이스의 구조를 정의
-> BaaS
-* 서비스형 블록체인 (Blockchain as a Service)
-> 스마트 그리드
-* 전기 및 정보통신 기술을 활용하여 전력망을 지능화·고도화함으로써 고품질의 전력서비스를 제공하고 에너지 이용효율을 극대화하는 전력망
-> 디지털 아카이빙
-* 지속적으로 보존할 가치를 가진 디지털 객체를 장기간 관리하여 이후의 이용을 보장하는 활동
-> Fcheck 
-* 파일 시스템의 상태를 체크함으로써 간단히 파일 시스템의 무결성을 감시 한다
-> 운행순서 (Root - order)
-* preorder
-* inorder
-* postorder
-> 디지털트윈
-* 라이프사이클 전반에 걸쳐 실시간 데이터를 사용
-* 시뮬레이션, 머신 러닝, 추론을 통해 의사 결정을 돕는 객체 또는 가상 모델
-> Zing
-* NFC에 사용되는 근거리 기술
-> WPA
-* Wi-Fi Protected Access
-> 링크드 리스트
-* 삽입, 삭제가 쉬운대신 검색속도가 오래걸림
-> RDB
-* 속석의 이름 / 속성의 값으로 튜플을 표현
-* 튜플은 상이한것으로 정의내림
-> cmp in C
-* 비교하는 함수
-> & in C
-* 메모리의 주소를 의미
-> ER Diagram의 이중속성과 기본키속성 표현방법   
-> 리눅스 로그파일
-* xferLog
-* > wtmp
-  * 성공한 로그인에 대한 로그
-* > utmp
-  * 현재 로그인 한 사람의 정보 로그
-> 데이터 베이스의 투명성 목표
-* A에 대하여 관계없이~~ -> A의 투명성
-* 무엇에 대하여 관계없는지를 파악하는것이 중요
-> 비트연산 기호
-* ^ - XOR - 배타적 논리합(둘이 다르면 참) 
-* ~ - NOR - Not OR   
-> SSH
-  * > 기능   
-  * > Default Port
-    * 22
-  * > 공개키 위치
-    * SERVER
-  * 원격명령, 쉘 서비스
-
-<br/>   
-
-#### 기타 외워야하는 Service및 기술들
-----
-> Stacheldraht
-* 분산서비스 거부공격을 하는 멜웨어
-> TFN(* Network)
-* Tribe Flood Network
-* 다양한 DDoS 공격을 수행하는 컴퓨터 프로그램 집합
-> Nimda
-* 님다는 2001년 9월에 발생한 컴퓨터 바이러스이다
-> PIMS(Personal Information *)
-* Personal Information Management System
-* 기업이 개인정보 보호 활동을 체계적, 지속적으로 수행하기 위해 점검하여 일정 수준 이상의 기업에 인증을 부여하는 제도
-> QKD(Quantum *)
-* Quantum Key Distribution 
-* 양자 물리학의 기본 원리를 활용하여 검증 가능한 보안으로 광섬유 네트워크를 통해 암호화 키를 교환하는 기술
-> Mashup
-* Web info -> new System
-> 타조   
-* 하둡(Hadoop) 기반의 분산 데이터 웨어하우스 프로젝트
-> 원세그
-* 일본의 이동방송 기술   
-> 포스퀘어   
-* 위치 기반 소셜 네트워크 서비스이자 이를 개발한 회사의 명칭
-> ASLR  
-* Address Space Layout Randomization
-* 주소 공간 배열 무작위화. 말 그대로 주소를 매번 실행할 때마다 무작위화시켜 공격을 방해 
-> Sqoop 
-* Hadoop과 관계형 데이터베이스 간에 데이터를 전송할 수 있도록 설계된 오픈소스 소프트웨어  
-> N-Screen   
-* 특정한 주제의 콘텐츠들을 여러 개의 스크린에서 동시에 볼 수 있다는 개념
-> Memristor   
-* Memory registor (이전의 상테를 기억하는 메모리)
-> MEMS   
-* Micro Electro Mechanical Systems (미세 전기 기계 시스템)의 약자
-* 미세한 입체 구조 (3차원 구조)를 지니며, 다양한 입력 · 출력 신호를 취급하는 시스템의 총칭
-> evil twin attack
-* 로그온한 사람들을 속이고 비밀번호나 신용카드 번호를 훔치기 위해 합법적인 네트워크인 것처럼 가장한 무선 네트워크
-> phisihing
-* 컴퓨팅에서 피싱(phishing)은 전자우편 또는 메신저를 사용해서 신뢰할 수 있는 사람 또는 기업이 보낸 메시지인 것처럼 가장
-* 비밀번호 및 신용카드 정보와 같이 기밀을 요하는 정보를 부정하게 얻으려는 소셜 엔지니어링
-> cyberbulling
-* 특정 메신저에 특정 학생을 초대해서 단체로 괴롭히는 행동
-> tripwire
-* 먼저 시스템에 존재하는 파일에 대해 데이터 베이스를 만들어 저장한 후 생성된 데이터베이스와 비교
-* 추가·삭제되거나 변조된 파일이 있는지 점검하고 관리자에게 레포팅해주는 무결성 검사도구
-> MapReduce
-* 필터링과 정렬을 거쳐 데이터를 추출(Reduce)하는 분산처리 기술과 관련된 Framework를 의미
->  NS Chart
-* http://itnovice1.blogspot.com/2019/08/nsnassi-schneiderman.html
